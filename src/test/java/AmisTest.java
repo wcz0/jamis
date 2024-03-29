@@ -7,9 +7,10 @@ public class AmisTest {
 
     @Test
     public void testAmis()  {
-        // String str = JSON.toJSONString(Amis.action().actionType("test"));
-        String str2 = Amis.action().actionType("test").toJson();
-        // System.out.println(str);
-        System.err.println(str2);
+
+        String str2 = JSON.toJSONString(Amis.Page().title("这是标题").body(new Object[]{
+            Amis.Action().className("Test").toJson(),
+        }).toJson());
+        System.out.println(str2);
     }
 }
