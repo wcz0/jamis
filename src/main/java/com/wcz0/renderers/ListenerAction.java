@@ -10,15 +10,10 @@ public class ListenerAction extends BaseRenderer {
 		this.set("type", "listenerAction");
 	}
 
-	public ListenerAction set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
 	    */
-	public ListenerAction stopPropagation(Object value) {
-		return (ListenerAction) this.set("stopPropagation", value);
+	public ListenerAction execOn(Object value) {
+		return (ListenerAction) this.set("execOn", value);
 	}
 	
 	/**
@@ -29,26 +24,14 @@ public class ListenerAction extends BaseRenderer {
 	
 	/**
 	    */
-	public ListenerAction description(Object value) {
-		return (ListenerAction) this.set("description", value);
-	}
-	
-	/**
-	    */
 	public ListenerAction componentId(Object value) {
 		return (ListenerAction) this.set("componentId", value);
 	}
 	
 	/**
 	    */
-	public ListenerAction componentName(Object value) {
-		return (ListenerAction) this.set("componentName", value);
-	}
-	
-	/**
-	    */
-	public ListenerAction ignoreError(Object value) {
-		return (ListenerAction) this.set("ignoreError", value);
+	public ListenerAction args(Object value) {
+		return (ListenerAction) this.set("args", value);
 	}
 	
 	/**
@@ -65,8 +48,26 @@ public class ListenerAction extends BaseRenderer {
 	
 	/**
 	    */
-	public ListenerAction args(Object value) {
-		return (ListenerAction) this.set("args", value);
+	public ListenerAction stopPropagation(Object value) {
+		return (ListenerAction) this.set("stopPropagation", value);
+	}
+	
+	/**
+	    */
+	public ListenerAction description(Object value) {
+		return (ListenerAction) this.set("description", value);
+	}
+	
+	/**
+	    */
+	public ListenerAction componentName(Object value) {
+		return (ListenerAction) this.set("componentName", value);
+	}
+	
+	/**
+	    */
+	public ListenerAction ignoreError(Object value) {
+		return (ListenerAction) this.set("ignoreError", value);
 	}
 	
 	/**
@@ -86,11 +87,5 @@ public class ListenerAction extends BaseRenderer {
 	    */
 	public ListenerAction expression(Object value) {
 		return (ListenerAction) this.set("expression", value);
-	}
-	
-	/**
-	    */
-	public ListenerAction execOn(Object value) {
-		return (ListenerAction) this.set("execOn", value);
 	}
 	}

@@ -11,16 +11,25 @@ public class Table extends BaseRenderer {
 		this.set("type", "table");
 	}
 
-	public Table set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 底部总结行
+	 * 编辑器配置，运行时可以忽略
     */
-	public Table affixRow(Object value) {
-		return (Table) this.set("affixRow", value);
+	public Table editorSetting(Object value) {
+		return (Table) this.set("editorSetting", value);
+	}
+	
+	/**
+	 * 底部外层 CSS 类名
+    */
+	public Table footerClassName(Object value) {
+		return (Table) this.set("footerClassName", value);
+	}
+	
+	/**
+	 * 是否显示底部
+    */
+	public Table showFooter(Object value) {
+		return (Table) this.set("showFooter", value);
 	}
 	
 	/**
@@ -28,48 +37,6 @@ public class Table extends BaseRenderer {
     */
 	public Table resizable(Object value) {
 		return (Table) this.set("resizable", value);
-	}
-	
-	/**
-	 * 静态展示表单项Label类名
-    */
-	public Table staticLabelClassName(Object value) {
-		return (Table) this.set("staticLabelClassName", value);
-	}
-	
-	/**
-	 * 可以组件级别用来关闭移动端样式
-    */
-	public Table useMobileUI(Object value) {
-		return (Table) this.set("useMobileUI", value);
-	}
-	
-	/**
-	 * 展示列显示开关，自动即：列数量大于或等于5个时自动开启
-    */
-	public Table columnsTogglable(Object value) {
-		return (Table) this.set("columnsTogglable", value);
-	}
-	
-	/**
-	 * 占位符
-    */
-	public Table placeholder(Object value) {
-		return (Table) this.set("placeholder", value);
-	}
-	
-	/**
-	 * 数据源：绑定当前环境变量
-    */
-	public Table source(Object value) {
-		return (Table) this.set("source", value);
-	}
-	
-	/**
-	 * 标题
-    */
-	public Table title(Object value) {
-		return (Table) this.set("title", value);
 	}
 	
 	/**
@@ -87,24 +54,23 @@ public class Table extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否隐藏
+	 * 静态展示空值占位
     */
-	public Table hidden(Object value) {
-		return (Table) this.set("hidden", value);
+	public Table staticPlaceholder(Object value) {
+		return (Table) this.set("staticPlaceholder", value);
 	}
 	
 	/**
-	 * 表格的列信息
-    */
-	public Table columns(Object value) {
-		return (Table) this.set("columns", value);
+	    */
+	public Table staticSchema(Object value) {
+		return (Table) this.set("staticSchema", value);
 	}
 	
 	/**
-	 * 合并单元格配置，配置数字表示从左到右的多少列自动合并单元格。
+	 * 表格自动计算高度
     */
-	public Table combineNum(Object value) {
-		return (Table) this.set("combineNum", value);
+	public Table autoFillHeight(Object value) {
+		return (Table) this.set("autoFillHeight", value);
 	}
 	
 	/**
@@ -115,17 +81,122 @@ public class Table extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否禁用
-    */
-	public Table disabled(Object value) {
-		return (Table) this.set("disabled", value);
+	    */
+	public Table testIdBuilder(Object value) {
+		return (Table) this.set("testIdBuilder", value);
 	}
 	
 	/**
-	 * 编辑器配置，运行时可以忽略
+	 * table layout
+    * 可选值: fixed | auto
     */
-	public Table editorSetting(Object value) {
-		return (Table) this.set("editorSetting", value);
+	public Table tableLayout(Object value) {
+		return (Table) this.set("tableLayout", value);
+	}
+	
+	/**
+	 * 是否固定表头
+    */
+	public Table affixHeader(Object value) {
+		return (Table) this.set("affixHeader", value);
+	}
+	
+	/**
+	 * 是否开启底部展示功能，适合移动端展示
+    */
+	public Table footable(Object value) {
+		return (Table) this.set("footable", value);
+	}
+	
+	/**
+	 * 工具栏 CSS 类名
+    */
+	public Table toolbarClassName(Object value) {
+		return (Table) this.set("toolbarClassName", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于日志采集
+    */
+	public Table id(Object value) {
+		return (Table) this.set("id", value);
+	}
+	
+	/**
+	 * 是否静态展示表达式
+    */
+	public Table staticOn(Object value) {
+		return (Table) this.set("staticOn", value);
+	}
+	
+	/**
+	 * 组件样式
+    */
+	public Table style(Object value) {
+		return (Table) this.set("style", value);
+	}
+	
+	/**
+	 * 占位符
+    */
+	public Table placeholder(Object value) {
+		return (Table) this.set("placeholder", value);
+	}
+	
+	/**
+	 * 标题
+    */
+	public Table title(Object value) {
+		return (Table) this.set("title", value);
+	}
+	
+	/**
+	 * 底部总结行
+    */
+	public Table affixRow(Object value) {
+		return (Table) this.set("affixRow", value);
+	}
+	
+	/**
+	 * 行角标
+    */
+	public Table itemBadge(Object value) {
+		return (Table) this.set("itemBadge", value);
+	}
+	
+	/**
+	 * 是否隐藏
+    */
+	public Table hidden(Object value) {
+		return (Table) this.set("hidden", value);
+	}
+	
+	/**
+	 * 是否静态展示
+    */
+	public Table static_(Object value) {
+		return (Table) this.set("static_", value);
+	}
+	
+	/**
+	 * 是否固底
+    */
+	public Table affixFooter(Object value) {
+		return (Table) this.set("affixFooter", value);
+	}
+	
+	/**
+	 * 事件动作配置
+    */
+	public Table onEvent(Object value) {
+		return (Table) this.set("onEvent", value);
+	}
+	
+	/**
+	 * 静态展示表单项Value类名
+    */
+	public Table staticInputClassName(Object value) {
+		return (Table) this.set("staticInputClassName", value);
 	}
 	
 	/**
@@ -137,17 +208,10 @@ public class Table extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否显示底部
+	 * 合并单元格配置，配置从第几列开始合并。
     */
-	public Table showFooter(Object value) {
-		return (Table) this.set("showFooter", value);
-	}
-	
-	/**
-	 * 是否显示头部
-    */
-	public Table showHeader(Object value) {
-		return (Table) this.set("showHeader", value);
+	public Table combineFromIndex(Object value) {
+		return (Table) this.set("combineFromIndex", value);
 	}
 	
 	/**
@@ -158,52 +222,17 @@ public class Table extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项Value类名
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
     */
-	public Table staticInputClassName(Object value) {
-		return (Table) this.set("staticInputClassName", value);
+	public Table $$id(Object value) {
+		return (Table) this.set("$$id", value);
 	}
 	
 	/**
-	 * 合并单元格配置，配置从第几列开始合并。
+	 * 是否显示
     */
-	public Table combineFromIndex(Object value) {
-		return (Table) this.set("combineFromIndex", value);
-	}
-	
-	/**
-	 * 行角标
-    */
-	public Table itemBadge(Object value) {
-		return (Table) this.set("itemBadge", value);
-	}
-	
-	/**
-	 * 表格自动计算高度
-    */
-	public Table autoFillHeight(Object value) {
-		return (Table) this.set("autoFillHeight", value);
-	}
-	
-	/**
-	 * 是否显示表达式
-    */
-	public Table visibleOn(Object value) {
-		return (Table) this.set("visibleOn", value);
-	}
-	
-	/**
-	 * 静态展示空值占位
-    */
-	public Table staticPlaceholder(Object value) {
-		return (Table) this.set("staticPlaceholder", value);
-	}
-	
-	/**
-	 * 顶部外层 CSS 类名
-    */
-	public Table headerClassName(Object value) {
-		return (Table) this.set("headerClassName", value);
+	public Table visible(Object value) {
+		return (Table) this.set("visible", value);
 	}
 	
 	/**
@@ -228,6 +257,13 @@ public class Table extends BaseRenderer {
 	}
 	
 	/**
+	 * 表格是否可以获取父级数据域值，默认为false
+    */
+	public Table canAccessSuperData(Object value) {
+		return (Table) this.set("canAccessSuperData", value);
+	}
+	
+	/**
 	 * 是否隐藏表达式
     */
 	public Table hiddenOn(Object value) {
@@ -235,10 +271,45 @@ public class Table extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否静态展示表达式
+	 * 顶部外层 CSS 类名
     */
-	public Table staticOn(Object value) {
-		return (Table) this.set("staticOn", value);
+	public Table headerClassName(Object value) {
+		return (Table) this.set("headerClassName", value);
+	}
+	
+	/**
+	 * 是否显示头部
+    */
+	public Table showHeader(Object value) {
+		return (Table) this.set("showHeader", value);
+	}
+	
+	/**
+	 * 数据源：绑定当前环境变量
+    */
+	public Table source(Object value) {
+		return (Table) this.set("source", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public Table staticLabelClassName(Object value) {
+		return (Table) this.set("staticLabelClassName", value);
+	}
+	
+	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public Table useMobileUI(Object value) {
+		return (Table) this.set("useMobileUI", value);
+	}
+	
+	/**
+	 * 表格的列信息
+    */
+	public Table columns(Object value) {
+		return (Table) this.set("columns", value);
 	}
 	
 	/**
@@ -250,30 +321,29 @@ public class Table extends BaseRenderer {
 	
 	/**
 	    */
-	public Table staticSchema(Object value) {
-		return (Table) this.set("staticSchema", value);
+	public Table testid(Object value) {
+		return (Table) this.set("testid", value);
 	}
 	
 	/**
-	 * 是否固底
+	 * 展示列显示开关，自动即：列数量大于或等于5个时自动开启
     */
-	public Table affixFooter(Object value) {
-		return (Table) this.set("affixFooter", value);
+	public Table columnsTogglable(Object value) {
+		return (Table) this.set("columnsTogglable", value);
 	}
 	
 	/**
-	 * 底部外层 CSS 类名
+	 * 合并单元格配置，配置数字表示从左到右的多少列自动合并单元格。
     */
-	public Table footerClassName(Object value) {
-		return (Table) this.set("footerClassName", value);
+	public Table combineNum(Object value) {
+		return (Table) this.set("combineNum", value);
 	}
 	
 	/**
-	 * table layout
-    * 可选值: fixed | auto
+	 * 是否禁用
     */
-	public Table tableLayout(Object value) {
-		return (Table) this.set("tableLayout", value);
+	public Table disabled(Object value) {
+		return (Table) this.set("disabled", value);
 	}
 	
 	/**
@@ -284,65 +354,9 @@ public class Table extends BaseRenderer {
 	}
 	
 	/**
-	 * 组件唯一 id，主要用于日志采集
+	 * 是否显示表达式
     */
-	public Table id(Object value) {
-		return (Table) this.set("id", value);
-	}
-	
-	/**
-	 * 事件动作配置
-    */
-	public Table onEvent(Object value) {
-		return (Table) this.set("onEvent", value);
-	}
-	
-	/**
-	 * 是否静态展示
-    */
-	public Table static_(Object value) {
-		return (Table) this.set("static_", value);
-	}
-	
-	/**
-	 * 组件样式
-    */
-	public Table style(Object value) {
-		return (Table) this.set("style", value);
-	}
-	
-	/**
-	 * 是否固定表头
-    */
-	public Table affixHeader(Object value) {
-		return (Table) this.set("affixHeader", value);
-	}
-	
-	/**
-	 * 是否显示
-    */
-	public Table visible(Object value) {
-		return (Table) this.set("visible", value);
-	}
-	
-	/**
-	 * 是否开启底部展示功能，适合移动端展示
-    */
-	public Table footable(Object value) {
-		return (Table) this.set("footable", value);
-	}
-	
-	/**
-	 * 工具栏 CSS 类名
-    */
-	public Table toolbarClassName(Object value) {
-		return (Table) this.set("toolbarClassName", value);
-	}
-	
-	/**
-	 * 表格是否可以获取父级数据域值，默认为false
-    */
-	public Table canAccessSuperData(Object value) {
-		return (Table) this.set("canAccessSuperData", value);
+	public Table visibleOn(Object value) {
+		return (Table) this.set("visibleOn", value);
 	}
 	}

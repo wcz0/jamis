@@ -10,44 +10,11 @@ public class ToastAction extends BaseRenderer {
 		this.set("type", "toastAction");
 	}
 
-	public ToastAction set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 禁用时的文案提示。
+	 * 是否隐藏
     */
-	public ToastAction disabledTip(Object value) {
-		return (ToastAction) this.set("disabledTip", value);
-	}
-	
-	/**
-	 * icon 上的css 类名
-    */
-	public ToastAction iconClassName(Object value) {
-		return (ToastAction) this.set("iconClassName", value);
-	}
-	
-	/**
-	 * 右侧按钮图标， iconfont 的类名
-    */
-	public ToastAction rightIcon(Object value) {
-		return (ToastAction) this.set("rightIcon", value);
-	}
-	
-	/**
-	 * 可以指定让谁来触发这个动作。
-    */
-	public ToastAction target(Object value) {
-		return (ToastAction) this.set("target", value);
-	}
-	
-	/**
-	 * 容器 css 类名
-    */
-	public ToastAction className(Object value) {
-		return (ToastAction) this.set("className", value);
+	public ToastAction hidden(Object value) {
+		return (ToastAction) this.set("hidden", value);
 	}
 	
 	/**
@@ -58,39 +25,24 @@ public class ToastAction extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示空值占位
+	 * icon 上的css 类名
     */
-	public ToastAction staticPlaceholder(Object value) {
-		return (ToastAction) this.set("staticPlaceholder", value);
+	public ToastAction iconClassName(Object value) {
+		return (ToastAction) this.set("iconClassName", value);
 	}
 	
 	/**
-	 * 指定按钮类型，支持 button、submit或者reset三种类型。
-    * 可选值: button | submit | reset
+	 * 键盘快捷键
     */
-	public ToastAction type(Object value) {
-		return (ToastAction) this.set("type", value);
+	public ToastAction hotKey(Object value) {
+		return (ToastAction) this.set("hotKey", value);
 	}
 	
 	/**
-	 * 轻提示详情 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/toast
+	 * 是否禁用
     */
-	public ToastAction toast(Object value) {
-		return (ToastAction) this.set("toast", value);
-	}
-	
-	/**
-	    * 可选值: top | right | bottom | left
-    */
-	public ToastAction tooltipPlacement(Object value) {
-		return (ToastAction) this.set("tooltipPlacement", value);
-	}
-	
-	/**
-	 * 自定义事件处理函数
-    */
-	public ToastAction onClick(Object value) {
-		return (ToastAction) this.set("onClick", value);
+	public ToastAction disabled(Object value) {
+		return (ToastAction) this.set("disabled", value);
 	}
 	
 	/**
@@ -101,22 +53,113 @@ public class ToastAction extends BaseRenderer {
 	}
 	
 	/**
-	    */
-	public ToastAction testid(Object value) {
-		return (ToastAction) this.set("testid", value);
+	 * 禁用时的文案提示。
+    */
+	public ToastAction disabledTip(Object value) {
+		return (ToastAction) this.set("disabledTip", value);
 	}
 	
 	/**
-	 * loading 上的css 类名
+	 * 按钮样式
+    * 可选值: info | success | warning | danger | link | primary | dark | light | secondary
     */
-	public ToastAction loadingClassName(Object value) {
-		return (ToastAction) this.set("loadingClassName", value);
+	public ToastAction level(Object value) {
+		return (ToastAction) this.set("level", value);
+	}
+	
+	/**
+	 * 容器 css 类名
+    */
+	public ToastAction className(Object value) {
+		return (ToastAction) this.set("className", value);
+	}
+	
+	/**
+	 * 是否禁用表达式
+    */
+	public ToastAction disabledOn(Object value) {
+		return (ToastAction) this.set("disabledOn", value);
+	}
+	
+	/**
+	 * 是否静态展示
+    */
+	public ToastAction static_(Object value) {
+		return (ToastAction) this.set("static_", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public ToastAction staticLabelClassName(Object value) {
+		return (ToastAction) this.set("staticLabelClassName", value);
+	}
+	
+	/**
+	    */
+	public ToastAction testIdBuilder(Object value) {
+		return (ToastAction) this.set("testIdBuilder", value);
+	}
+	
+	/**
+	 * 提示文字，配置了操作前会要求用户确认。
+    */
+	public ToastAction confirmText(Object value) {
+		return (ToastAction) this.set("confirmText", value);
+	}
+	
+	/**
+	 * 按钮图标， iconfont 的类名
+    */
+	public ToastAction icon(Object value) {
+		return (ToastAction) this.set("icon", value);
+	}
+	
+	/**
+	    */
+	public ToastAction primary(Object value) {
+		return (ToastAction) this.set("primary", value);
+	}
+	
+	/**
+	 * 右侧按钮图标， iconfont 的类名
+    */
+	public ToastAction rightIcon(Object value) {
+		return (ToastAction) this.set("rightIcon", value);
+	}
+	
+	/**
+	 * 激活状态时的样式
+    */
+	public ToastAction activeLevel(Object value) {
+		return (ToastAction) this.set("activeLevel", value);
+	}
+	
+	/**
+	 * 静态展示表单项Value类名
+    */
+	public ToastAction staticInputClassName(Object value) {
+		return (ToastAction) this.set("staticInputClassName", value);
 	}
 	
 	/**
 	    */
 	public ToastAction tooltip(Object value) {
 		return (ToastAction) this.set("tooltip", value);
+	}
+	
+	/**
+	 * 静态展示空值占位
+    */
+	public ToastAction staticPlaceholder(Object value) {
+		return (ToastAction) this.set("staticPlaceholder", value);
+	}
+	
+	/**
+	 * 激活状态时的类名
+    */
+	public ToastAction activeClassName(Object value) {
+		return (ToastAction) this.set("activeClassName", value);
 	}
 	
 	/**
@@ -134,52 +177,17 @@ public class ToastAction extends BaseRenderer {
 	}
 	
 	/**
-	 * 指定为打开弹窗，抽出式弹窗
+	 * 轻提示详情 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/toast
     */
-	public ToastAction actionType(Object value) {
-		return (ToastAction) this.set("actionType", value);
+	public ToastAction toast(Object value) {
+		return (ToastAction) this.set("toast", value);
 	}
 	
 	/**
-	 * 是否静态展示
+	 * 可以指定让谁来触发这个动作。
     */
-	public ToastAction static_(Object value) {
-		return (ToastAction) this.set("static_", value);
-	}
-	
-	/**
-	 * 编辑器配置，运行时可以忽略
-    */
-	public ToastAction editorSetting(Object value) {
-		return (ToastAction) this.set("editorSetting", value);
-	}
-	
-	/**
-	 * 可以组件级别用来关闭移动端样式
-    */
-	public ToastAction useMobileUI(Object value) {
-		return (ToastAction) this.set("useMobileUI", value);
-	}
-	
-	/**
-	 * 如果按钮在弹框中，可以配置这个动作完成后是否关闭弹窗，或者指定关闭目标弹框。
-    */
-	public ToastAction close(Object value) {
-		return (ToastAction) this.set("close", value);
-	}
-	
-	/**
-	 * 是否禁用
-    */
-	public ToastAction disabled(Object value) {
-		return (ToastAction) this.set("disabled", value);
-	}
-	
-	/**
-	 * 激活状态时的样式
-    */
-	public ToastAction activeLevel(Object value) {
-		return (ToastAction) this.set("activeLevel", value);
+	public ToastAction target(Object value) {
+		return (ToastAction) this.set("target", value);
 	}
 	
 	/**
@@ -190,37 +198,50 @@ public class ToastAction extends BaseRenderer {
 	}
 	
 	/**
-	 * 激活状态时的类名
-    */
-	public ToastAction activeClassName(Object value) {
-		return (ToastAction) this.set("activeClassName", value);
+	    */
+	public ToastAction testid(Object value) {
+		return (ToastAction) this.set("testid", value);
 	}
 	
 	/**
-	 * 倒计时文字自定义
+	 * 是否为块状展示，默认为内联。
     */
-	public ToastAction countDownTpl(Object value) {
-		return (ToastAction) this.set("countDownTpl", value);
+	public ToastAction block(Object value) {
+		return (ToastAction) this.set("block", value);
 	}
 	
 	/**
-	 * 键盘快捷键
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
     */
-	public ToastAction hotKey(Object value) {
-		return (ToastAction) this.set("hotKey", value);
-	}
-	
-	/**
-	 * 是否隐藏表达式
-    */
-	public ToastAction hiddenOn(Object value) {
-		return (ToastAction) this.set("hiddenOn", value);
+	public ToastAction $$id(Object value) {
+		return (ToastAction) this.set("$$id", value);
 	}
 	
 	/**
 	    */
 	public ToastAction staticSchema(Object value) {
 		return (ToastAction) this.set("staticSchema", value);
+	}
+	
+	/**
+	 * 如果按钮在form中，配置此属性会要求用户把指定的字段通过验证后才会触发行为。
+    */
+	public ToastAction required(Object value) {
+		return (ToastAction) this.set("required", value);
+	}
+	
+	/**
+	 * 子内容
+    */
+	public ToastAction body(Object value) {
+		return (ToastAction) this.set("body", value);
+	}
+	
+	/**
+	 * 是否显示表达式
+    */
+	public ToastAction visibleOn(Object value) {
+		return (ToastAction) this.set("visibleOn", value);
 	}
 	
 	/**
@@ -238,44 +259,45 @@ public class ToastAction extends BaseRenderer {
 	}
 	
 	/**
-	    */
-	public ToastAction primary(Object value) {
-		return (ToastAction) this.set("primary", value);
+	 * 按钮文字
+    */
+	public ToastAction label(Object value) {
+		return (ToastAction) this.set("label", value);
 	}
 	
 	/**
-	 * 提示文字，配置了操作前会要求用户确认。
+	 * 编辑器配置，运行时可以忽略
     */
-	public ToastAction confirmText(Object value) {
-		return (ToastAction) this.set("confirmText", value);
+	public ToastAction editorSetting(Object value) {
+		return (ToastAction) this.set("editorSetting", value);
 	}
 	
 	/**
-	 * 是否隐藏
+	 * 可以组件级别用来关闭移动端样式
     */
-	public ToastAction hidden(Object value) {
-		return (ToastAction) this.set("hidden", value);
+	public ToastAction useMobileUI(Object value) {
+		return (ToastAction) this.set("useMobileUI", value);
 	}
 	
 	/**
-	 * 是否显示
+	 * loading 上的css 类名
     */
-	public ToastAction visible(Object value) {
-		return (ToastAction) this.set("visible", value);
+	public ToastAction loadingClassName(Object value) {
+		return (ToastAction) this.set("loadingClassName", value);
 	}
 	
 	/**
-	 * 静态展示表单项Value类名
+	 * 倒计时文字自定义
     */
-	public ToastAction staticInputClassName(Object value) {
-		return (ToastAction) this.set("staticInputClassName", value);
+	public ToastAction countDownTpl(Object value) {
+		return (ToastAction) this.set("countDownTpl", value);
 	}
 	
 	/**
-	 * 是否为块状展示，默认为内联。
+	 * 自定义事件处理函数
     */
-	public ToastAction block(Object value) {
-		return (ToastAction) this.set("block", value);
+	public ToastAction onClick(Object value) {
+		return (ToastAction) this.set("onClick", value);
 	}
 	
 	/**
@@ -287,17 +309,17 @@ public class ToastAction extends BaseRenderer {
 	}
 	
 	/**
-	 * 如果按钮在form中，配置此属性会要求用户把指定的字段通过验证后才会触发行为。
-    */
-	public ToastAction required(Object value) {
-		return (ToastAction) this.set("required", value);
-	}
-	
-	/**
 	 * 是否显示loading效果
     */
 	public ToastAction loadingOn(Object value) {
 		return (ToastAction) this.set("loadingOn", value);
+	}
+	
+	/**
+	 * 是否隐藏表达式
+    */
+	public ToastAction hiddenOn(Object value) {
+		return (ToastAction) this.set("hiddenOn", value);
 	}
 	
 	/**
@@ -308,6 +330,28 @@ public class ToastAction extends BaseRenderer {
 	}
 	
 	/**
+	 * 指定按钮类型，支持 button、submit或者reset三种类型。
+    * 可选值: button | submit | reset
+    */
+	public ToastAction type(Object value) {
+		return (ToastAction) this.set("type", value);
+	}
+	
+	/**
+	 * 如果按钮在弹框中，可以配置这个动作完成后是否关闭弹窗，或者指定关闭目标弹框。
+    */
+	public ToastAction close(Object value) {
+		return (ToastAction) this.set("close", value);
+	}
+	
+	/**
+	 * 是否显示
+    */
+	public ToastAction visible(Object value) {
+		return (ToastAction) this.set("visible", value);
+	}
+	
+	/**
 	 * 静态展示表单项类名
     */
 	public ToastAction staticClassName(Object value) {
@@ -315,18 +359,10 @@ public class ToastAction extends BaseRenderer {
 	}
 	
 	/**
-	 * 按钮图标， iconfont 的类名
+	    * 可选值: top | right | bottom | left
     */
-	public ToastAction icon(Object value) {
-		return (ToastAction) this.set("icon", value);
-	}
-	
-	/**
-	 * 按钮样式
-    * 可选值: info | success | warning | danger | link | primary | dark | light | secondary
-    */
-	public ToastAction level(Object value) {
-		return (ToastAction) this.set("level", value);
+	public ToastAction tooltipPlacement(Object value) {
+		return (ToastAction) this.set("tooltipPlacement", value);
 	}
 	
 	/**
@@ -337,37 +373,9 @@ public class ToastAction extends BaseRenderer {
 	}
 	
 	/**
-	 * 子内容
+	 * 指定为打开弹窗，抽出式弹窗
     */
-	public ToastAction body(Object value) {
-		return (ToastAction) this.set("body", value);
-	}
-	
-	/**
-	 * 是否禁用表达式
-    */
-	public ToastAction disabledOn(Object value) {
-		return (ToastAction) this.set("disabledOn", value);
-	}
-	
-	/**
-	 * 是否显示表达式
-    */
-	public ToastAction visibleOn(Object value) {
-		return (ToastAction) this.set("visibleOn", value);
-	}
-	
-	/**
-	 * 静态展示表单项Label类名
-    */
-	public ToastAction staticLabelClassName(Object value) {
-		return (ToastAction) this.set("staticLabelClassName", value);
-	}
-	
-	/**
-	 * 按钮文字
-    */
-	public ToastAction label(Object value) {
-		return (ToastAction) this.set("label", value);
+	public ToastAction actionType(Object value) {
+		return (ToastAction) this.set("actionType", value);
 	}
 	}

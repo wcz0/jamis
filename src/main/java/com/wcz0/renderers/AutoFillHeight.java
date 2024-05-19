@@ -10,11 +10,6 @@ public class AutoFillHeight extends BaseRenderer {
 		this.set("type", "autoFillHeight");
 	}
 
-	public AutoFillHeight set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
 	    */
 	public AutoFillHeight height(Object value) {

@@ -10,11 +10,6 @@ public class Expandable extends BaseRenderer {
 		this.set("type", "expandable");
 	}
 
-	public Expandable set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
 	 * 对应渲染器类型
     */

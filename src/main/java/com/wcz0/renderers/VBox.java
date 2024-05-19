@@ -11,25 +11,6 @@ public class VBox extends BaseRenderer {
 		this.set("type", "vBox");
 	}
 
-	public VBox set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
-	/**
-	 * 是否显示
-    */
-	public VBox visible(Object value) {
-		return (VBox) this.set("visible", value);
-	}
-	
-	/**
-	 * 是否显示表达式
-    */
-	public VBox visibleOn(Object value) {
-		return (VBox) this.set("visibleOn", value);
-	}
-	
 	/**
 	 * 组件唯一 id，主要用于日志采集
     */
@@ -38,24 +19,38 @@ public class VBox extends BaseRenderer {
 	}
 	
 	/**
-	 * 编辑器配置，运行时可以忽略
+	 * 事件动作配置
     */
-	public VBox editorSetting(Object value) {
-		return (VBox) this.set("editorSetting", value);
+	public VBox onEvent(Object value) {
+		return (VBox) this.set("onEvent", value);
 	}
 	
 	/**
-	 * 容器 css 类名
+	 * 静态展示空值占位
     */
-	public VBox className(Object value) {
-		return (VBox) this.set("className", value);
+	public VBox staticPlaceholder(Object value) {
+		return (VBox) this.set("staticPlaceholder", value);
 	}
 	
 	/**
-	 * 静态展示表单项Label类名
+	 * 行集合
     */
-	public VBox staticLabelClassName(Object value) {
-		return (VBox) this.set("staticLabelClassName", value);
+	public VBox rows(Object value) {
+		return (VBox) this.set("rows", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
+    */
+	public VBox $$id(Object value) {
+		return (VBox) this.set("$$id", value);
+	}
+	
+	/**
+	 * 是否禁用表达式
+    */
+	public VBox disabledOn(Object value) {
+		return (VBox) this.set("disabledOn", value);
 	}
 	
 	/**
@@ -66,17 +61,22 @@ public class VBox extends BaseRenderer {
 	}
 	
 	/**
-	 * 组件样式
-    */
-	public VBox style(Object value) {
-		return (VBox) this.set("style", value);
+	    */
+	public VBox testIdBuilder(Object value) {
+		return (VBox) this.set("testIdBuilder", value);
 	}
 	
 	/**
-	 * 行集合
+	    */
+	public VBox type(Object value) {
+		return (VBox) this.set("type", value);
+	}
+	
+	/**
+	 * 容器 css 类名
     */
-	public VBox rows(Object value) {
-		return (VBox) this.set("rows", value);
+	public VBox className(Object value) {
+		return (VBox) this.set("className", value);
 	}
 	
 	/**
@@ -94,24 +94,10 @@ public class VBox extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否隐藏表达式
+	 * 静态展示表单项类名
     */
-	public VBox hiddenOn(Object value) {
-		return (VBox) this.set("hiddenOn", value);
-	}
-	
-	/**
-	 * 是否静态展示表达式
-    */
-	public VBox staticOn(Object value) {
-		return (VBox) this.set("staticOn", value);
-	}
-	
-	/**
-	 * 静态展示空值占位
-    */
-	public VBox staticPlaceholder(Object value) {
-		return (VBox) this.set("staticPlaceholder", value);
+	public VBox staticClassName(Object value) {
+		return (VBox) this.set("staticClassName", value);
 	}
 	
 	/**
@@ -122,22 +108,43 @@ public class VBox extends BaseRenderer {
 	
 	/**
 	    */
-	public VBox type(Object value) {
-		return (VBox) this.set("type", value);
+	public VBox testid(Object value) {
+		return (VBox) this.set("testid", value);
 	}
 	
 	/**
-	 * 是否禁用表达式
+	 * 组件样式
     */
-	public VBox disabledOn(Object value) {
-		return (VBox) this.set("disabledOn", value);
+	public VBox style(Object value) {
+		return (VBox) this.set("style", value);
 	}
 	
 	/**
-	 * 事件动作配置
+	 * 编辑器配置，运行时可以忽略
     */
-	public VBox onEvent(Object value) {
-		return (VBox) this.set("onEvent", value);
+	public VBox editorSetting(Object value) {
+		return (VBox) this.set("editorSetting", value);
+	}
+	
+	/**
+	 * 是否隐藏表达式
+    */
+	public VBox hiddenOn(Object value) {
+		return (VBox) this.set("hiddenOn", value);
+	}
+	
+	/**
+	 * 是否显示
+    */
+	public VBox visible(Object value) {
+		return (VBox) this.set("visible", value);
+	}
+	
+	/**
+	 * 是否显示表达式
+    */
+	public VBox visibleOn(Object value) {
+		return (VBox) this.set("visibleOn", value);
 	}
 	
 	/**
@@ -148,10 +155,17 @@ public class VBox extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项类名
+	 * 是否静态展示表达式
     */
-	public VBox staticClassName(Object value) {
-		return (VBox) this.set("staticClassName", value);
+	public VBox staticOn(Object value) {
+		return (VBox) this.set("staticOn", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public VBox staticLabelClassName(Object value) {
+		return (VBox) this.set("staticLabelClassName", value);
 	}
 	
 	/**

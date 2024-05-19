@@ -10,11 +10,6 @@ public class ComboCondition extends BaseRenderer {
 		this.set("type", "comboCondition");
 	}
 
-	public ComboCondition set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
 	    */
 	public ComboCondition test(Object value) {

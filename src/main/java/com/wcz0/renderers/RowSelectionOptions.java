@@ -10,11 +10,6 @@ public class RowSelectionOptions extends BaseRenderer {
 		this.set("type", "rowSelectionOptions");
 	}
 
-	public RowSelectionOptions set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
 	 * 选择类型 选择全部
     */

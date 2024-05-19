@@ -11,51 +11,11 @@ public class PortletTab extends BaseRenderer {
 		this.set("type", "portletTab");
 	}
 
-	public PortletTab set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 静态展示表单项Label类名
+	 * 组件唯一 id，主要用于日志采集
     */
-	public PortletTab staticLabelClassName(Object value) {
-		return (PortletTab) this.set("staticLabelClassName", value);
-	}
-	
-	/**
-	 * 内容
-    */
-	public PortletTab tab(Object value) {
-		return (PortletTab) this.set("tab", value);
-	}
-	
-	/**
-	    * 可选值: left | right
-    */
-	public PortletTab iconPosition(Object value) {
-		return (PortletTab) this.set("iconPosition", value);
-	}
-	
-	/**
-	 * 是否禁用表达式
-    */
-	public PortletTab disabledOn(Object value) {
-		return (PortletTab) this.set("disabledOn", value);
-	}
-	
-	/**
-	 * 是否静态展示表达式
-    */
-	public PortletTab staticOn(Object value) {
-		return (PortletTab) this.set("staticOn", value);
-	}
-	
-	/**
-	 * 静态展示空值占位
-    */
-	public PortletTab staticPlaceholder(Object value) {
-		return (PortletTab) this.set("staticPlaceholder", value);
+	public PortletTab id(Object value) {
+		return (PortletTab) this.set("id", value);
 	}
 	
 	/**
@@ -66,58 +26,24 @@ public class PortletTab extends BaseRenderer {
 	}
 	
 	/**
-	    */
-	public PortletTab staticSchema(Object value) {
-		return (PortletTab) this.set("staticSchema", value);
+	 * 静态展示空值占位
+    */
+	public PortletTab staticPlaceholder(Object value) {
+		return (PortletTab) this.set("staticPlaceholder", value);
 	}
 	
 	/**
-	 * 按钮图标
+	 * 组件样式
     */
-	public PortletTab icon(Object value) {
-		return (PortletTab) this.set("icon", value);
+	public PortletTab style(Object value) {
+		return (PortletTab) this.set("style", value);
 	}
 	
 	/**
-	 * 设置以后内容每次都会重新渲染
+	    * 可选值: left | right
     */
-	public PortletTab reload(Object value) {
-		return (PortletTab) this.set("reload", value);
-	}
-	
-	/**
-	 * 点开时才加载卡片内容
-    */
-	public PortletTab mountOnEnter(Object value) {
-		return (PortletTab) this.set("mountOnEnter", value);
-	}
-	
-	/**
-	 * 容器 css 类名
-    */
-	public PortletTab className(Object value) {
-		return (PortletTab) this.set("className", value);
-	}
-	
-	/**
-	 * 组件唯一 id，主要用于日志采集
-    */
-	public PortletTab id(Object value) {
-		return (PortletTab) this.set("id", value);
-	}
-	
-	/**
-	 * 事件动作配置
-    */
-	public PortletTab onEvent(Object value) {
-		return (PortletTab) this.set("onEvent", value);
-	}
-	
-	/**
-	 * 卡片隐藏就销毁卡片节点。
-    */
-	public PortletTab unmountOnExit(Object value) {
-		return (PortletTab) this.set("unmountOnExit", value);
+	public PortletTab iconPosition(Object value) {
+		return (PortletTab) this.set("iconPosition", value);
 	}
 	
 	/**
@@ -135,45 +61,10 @@ public class PortletTab extends BaseRenderer {
 	}
 	
 	/**
-	 * 可以组件级别用来关闭移动端样式
-    */
-	public PortletTab useMobileUI(Object value) {
-		return (PortletTab) this.set("useMobileUI", value);
-	}
-	
-	/**
-	 * 是否隐藏表达式
-    */
-	public PortletTab hiddenOn(Object value) {
-		return (PortletTab) this.set("hiddenOn", value);
-	}
-	
-	/**
-	 * 是否显示
-    */
-	public PortletTab visible(Object value) {
-		return (PortletTab) this.set("visible", value);
-	}
-	
-	/**
 	 * 静态展示表单项类名
     */
 	public PortletTab staticClassName(Object value) {
 		return (PortletTab) this.set("staticClassName", value);
-	}
-	
-	/**
-	 * Tab 标题
-    */
-	public PortletTab title(Object value) {
-		return (PortletTab) this.set("title", value);
-	}
-	
-	/**
-	 * 是否禁用
-    */
-	public PortletTab disabled(Object value) {
-		return (PortletTab) this.set("disabled", value);
 	}
 	
 	/**
@@ -191,10 +82,24 @@ public class PortletTab extends BaseRenderer {
 	}
 	
 	/**
-	 * 组件样式
+	 * 按钮图标
     */
-	public PortletTab style(Object value) {
-		return (PortletTab) this.set("style", value);
+	public PortletTab icon(Object value) {
+		return (PortletTab) this.set("icon", value);
+	}
+	
+	/**
+	 * 点开时才加载卡片内容
+    */
+	public PortletTab mountOnEnter(Object value) {
+		return (PortletTab) this.set("mountOnEnter", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
+    */
+	public PortletTab $$id(Object value) {
+		return (PortletTab) this.set("$$id", value);
 	}
 	
 	/**
@@ -205,9 +110,118 @@ public class PortletTab extends BaseRenderer {
 	}
 	
 	/**
+	    */
+	public PortletTab testid(Object value) {
+		return (PortletTab) this.set("testid", value);
+	}
+	
+	/**
+	 * 事件动作配置
+    */
+	public PortletTab onEvent(Object value) {
+		return (PortletTab) this.set("onEvent", value);
+	}
+	
+	/**
+	 * 设置以后内容每次都会重新渲染
+    */
+	public PortletTab reload(Object value) {
+		return (PortletTab) this.set("reload", value);
+	}
+	
+	/**
+	 * 是否显示
+    */
+	public PortletTab visible(Object value) {
+		return (PortletTab) this.set("visible", value);
+	}
+	
+	/**
+	    */
+	public PortletTab staticSchema(Object value) {
+		return (PortletTab) this.set("staticSchema", value);
+	}
+	
+	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public PortletTab useMobileUI(Object value) {
+		return (PortletTab) this.set("useMobileUI", value);
+	}
+	
+	/**
+	 * 内容
+    */
+	public PortletTab tab(Object value) {
+		return (PortletTab) this.set("tab", value);
+	}
+	
+	/**
+	 * 卡片隐藏就销毁卡片节点。
+    */
+	public PortletTab unmountOnExit(Object value) {
+		return (PortletTab) this.set("unmountOnExit", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public PortletTab staticLabelClassName(Object value) {
+		return (PortletTab) this.set("staticLabelClassName", value);
+	}
+	
+	/**
+	    */
+	public PortletTab testIdBuilder(Object value) {
+		return (PortletTab) this.set("testIdBuilder", value);
+	}
+	
+	/**
 	 * 可以在右侧配置点其他功能按钮，随着tab切换而切换
     */
 	public PortletTab toolbar(Object value) {
 		return (PortletTab) this.set("toolbar", value);
+	}
+	
+	/**
+	 * 是否禁用表达式
+    */
+	public PortletTab disabledOn(Object value) {
+		return (PortletTab) this.set("disabledOn", value);
+	}
+	
+	/**
+	 * 是否禁用
+    */
+	public PortletTab disabled(Object value) {
+		return (PortletTab) this.set("disabled", value);
+	}
+	
+	/**
+	 * 是否隐藏表达式
+    */
+	public PortletTab hiddenOn(Object value) {
+		return (PortletTab) this.set("hiddenOn", value);
+	}
+	
+	/**
+	 * 是否静态展示表达式
+    */
+	public PortletTab staticOn(Object value) {
+		return (PortletTab) this.set("staticOn", value);
+	}
+	
+	/**
+	 * Tab 标题
+    */
+	public PortletTab title(Object value) {
+		return (PortletTab) this.set("title", value);
+	}
+	
+	/**
+	 * 容器 css 类名
+    */
+	public PortletTab className(Object value) {
+		return (PortletTab) this.set("className", value);
 	}
 	}

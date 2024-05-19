@@ -93,6 +93,7 @@ import com.wcz0.renderers.InputExcel;
 import com.wcz0.renderers.InputGroupControl;
 import com.wcz0.renderers.InputKV;
 import com.wcz0.renderers.InputKVS;
+import com.wcz0.renderers.InputSignature;
 import com.wcz0.renderers.InputTimeRange;
 import com.wcz0.renderers.InputYearRange;
 import com.wcz0.renderers.JSONSchemaEditorControl;
@@ -573,6 +574,10 @@ public class Amis {
 
 	public static InputKVS InputKVS(){
 		return new InputKVS();
+	}
+
+	public static InputSignature InputSignature(){
+		return new InputSignature();
 	}
 
 	public static InputTimeRange InputTimeRange(){

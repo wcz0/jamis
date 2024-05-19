@@ -10,11 +10,13 @@ public class AutoGenerateFilter extends BaseRenderer {
 		this.set("type", "autoGenerateFilter");
 	}
 
-	public AutoGenerateFilter set(String key, Object value) {
-		super.set(key, value);
-		return this;
+	/**
+	 * 是否默认收起
+    */
+	public AutoGenerateFilter defaultCollapsed(Object value) {
+		return (AutoGenerateFilter) this.set("defaultCollapsed", value);
 	}
-
+	
 	/**
 	 * 过滤条件单行列数
     */
@@ -27,12 +29,5 @@ public class AutoGenerateFilter extends BaseRenderer {
     */
 	public AutoGenerateFilter showBtnToolbar(Object value) {
 		return (AutoGenerateFilter) this.set("showBtnToolbar", value);
-	}
-	
-	/**
-	 * 是否默认收起
-    */
-	public AutoGenerateFilter defaultCollapsed(Object value) {
-		return (AutoGenerateFilter) this.set("defaultCollapsed", value);
 	}
 	}

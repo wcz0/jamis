@@ -10,20 +10,15 @@ public class IconItem extends BaseRenderer {
 		this.set("type", "iconItem");
 	}
 
-	public IconItem set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
-	/**
-	    */
-	public IconItem position(Object value) {
-		return (IconItem) this.set("position", value);
-	}
-	
 	/**
 	    */
 	public IconItem icon(Object value) {
 		return (IconItem) this.set("icon", value);
+	}
+	
+	/**
+	    */
+	public IconItem position(Object value) {
+		return (IconItem) this.set("position", value);
 	}
 	}

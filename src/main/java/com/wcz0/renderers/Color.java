@@ -11,17 +11,6 @@ public class Color extends BaseRenderer {
 		this.set("type", "color");
 	}
 
-	public Color set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
-	/**
-	    */
-	public Color staticSchema(Object value) {
-		return (Color) this.set("staticSchema", value);
-	}
-	
 	/**
 	 * 编辑器配置，运行时可以忽略
     */
@@ -30,45 +19,17 @@ public class Color extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否隐藏表达式
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
     */
-	public Color hiddenOn(Object value) {
-		return (Color) this.set("hiddenOn", value);
+	public Color $$id(Object value) {
+		return (Color) this.set("$$id", value);
 	}
 	
 	/**
-	 * 是否显示表达式
+	 * 是否禁用
     */
-	public Color visibleOn(Object value) {
-		return (Color) this.set("visibleOn", value);
-	}
-	
-	/**
-	 * 是否静态展示
-    */
-	public Color static_(Object value) {
-		return (Color) this.set("static_", value);
-	}
-	
-	/**
-	 * 是否静态展示表达式
-    */
-	public Color staticOn(Object value) {
-		return (Color) this.set("staticOn", value);
-	}
-	
-	/**
-	 * 静态展示表单项类名
-    */
-	public Color staticClassName(Object value) {
-		return (Color) this.set("staticClassName", value);
-	}
-	
-	/**
-	 * 容器 css 类名
-    */
-	public Color className(Object value) {
-		return (Color) this.set("className", value);
+	public Color disabled(Object value) {
+		return (Color) this.set("disabled", value);
 	}
 	
 	/**
@@ -79,10 +40,10 @@ public class Color extends BaseRenderer {
 	}
 	
 	/**
-	 * 事件动作配置
+	 * 组件唯一 id，主要用于日志采集
     */
-	public Color onEvent(Object value) {
-		return (Color) this.set("onEvent", value);
+	public Color id(Object value) {
+		return (Color) this.set("id", value);
 	}
 	
 	/**
@@ -100,59 +61,9 @@ public class Color extends BaseRenderer {
 	}
 	
 	/**
-	 * 组件样式
-    */
-	public Color style(Object value) {
-		return (Color) this.set("style", value);
-	}
-	
-	/**
-	 * 是否禁用
-    */
-	public Color disabled(Object value) {
-		return (Color) this.set("disabled", value);
-	}
-	
-	/**
-	 * 是否禁用表达式
-    */
-	public Color disabledOn(Object value) {
-		return (Color) this.set("disabledOn", value);
-	}
-	
-	/**
-	 * 是否显示
-    */
-	public Color visible(Object value) {
-		return (Color) this.set("visible", value);
-	}
-	
-	/**
-	 * 组件唯一 id，主要用于日志采集
-    */
-	public Color id(Object value) {
-		return (Color) this.set("id", value);
-	}
-	
-	/**
-	 * 静态展示空值占位
-    */
-	public Color staticPlaceholder(Object value) {
-		return (Color) this.set("staticPlaceholder", value);
-	}
-	
-	/**
-	 * 可以组件级别用来关闭移动端样式
-    */
-	public Color useMobileUI(Object value) {
-		return (Color) this.set("useMobileUI", value);
-	}
-	
-	/**
-	 * 指定为颜色显示控件
-    */
-	public Color type(Object value) {
-		return (Color) this.set("type", value);
+	    */
+	public Color staticSchema(Object value) {
+		return (Color) this.set("staticSchema", value);
 	}
 	
 	/**
@@ -163,9 +74,112 @@ public class Color extends BaseRenderer {
 	}
 	
 	/**
+	 * 静态展示表单项类名
+    */
+	public Color staticClassName(Object value) {
+		return (Color) this.set("staticClassName", value);
+	}
+	
+	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public Color useMobileUI(Object value) {
+		return (Color) this.set("useMobileUI", value);
+	}
+	
+	/**
+	    */
+	public Color testid(Object value) {
+		return (Color) this.set("testid", value);
+	}
+	
+	/**
+	 * 容器 css 类名
+    */
+	public Color className(Object value) {
+		return (Color) this.set("className", value);
+	}
+	
+	/**
+	 * 是否禁用表达式
+    */
+	public Color disabledOn(Object value) {
+		return (Color) this.set("disabledOn", value);
+	}
+	
+	/**
+	 * 是否显示表达式
+    */
+	public Color visibleOn(Object value) {
+		return (Color) this.set("visibleOn", value);
+	}
+	
+	/**
+	 * 是否静态展示表达式
+    */
+	public Color staticOn(Object value) {
+		return (Color) this.set("staticOn", value);
+	}
+	
+	/**
+	 * 静态展示空值占位
+    */
+	public Color staticPlaceholder(Object value) {
+		return (Color) this.set("staticPlaceholder", value);
+	}
+	
+	/**
 	 * 是否用文字显示值。
     */
 	public Color showValue(Object value) {
 		return (Color) this.set("showValue", value);
+	}
+	
+	/**
+	 * 是否隐藏表达式
+    */
+	public Color hiddenOn(Object value) {
+		return (Color) this.set("hiddenOn", value);
+	}
+	
+	/**
+	 * 是否显示
+    */
+	public Color visible(Object value) {
+		return (Color) this.set("visible", value);
+	}
+	
+	/**
+	 * 事件动作配置
+    */
+	public Color onEvent(Object value) {
+		return (Color) this.set("onEvent", value);
+	}
+	
+	/**
+	 * 是否静态展示
+    */
+	public Color static_(Object value) {
+		return (Color) this.set("static_", value);
+	}
+	
+	/**
+	 * 组件样式
+    */
+	public Color style(Object value) {
+		return (Color) this.set("style", value);
+	}
+	
+	/**
+	    */
+	public Color testIdBuilder(Object value) {
+		return (Color) this.set("testIdBuilder", value);
+	}
+	
+	/**
+	 * 指定为颜色显示控件
+    */
+	public Color type(Object value) {
+		return (Color) this.set("type", value);
 	}
 	}

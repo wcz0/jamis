@@ -11,30 +11,52 @@ public class ButtonGroup extends BaseRenderer {
 		this.set("type", "buttonGroup");
 	}
 
-	public ButtonGroup set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 是否显示
+	 * 指定为提交按钮类型
     */
-	public ButtonGroup visible(Object value) {
-		return (ButtonGroup) this.set("visible", value);
+	public ButtonGroup type(Object value) {
+		return (ButtonGroup) this.set("type", value);
 	}
 	
 	/**
-	 * 组件样式
-    */
-	public ButtonGroup style(Object value) {
-		return (ButtonGroup) this.set("style", value);
+	    */
+	public ButtonGroup btnClassName(Object value) {
+		return (ButtonGroup) this.set("btnClassName", value);
 	}
 	
 	/**
-	 * 可以组件级别用来关闭移动端样式
+	 * 按钮选中的样式级别
     */
-	public ButtonGroup useMobileUI(Object value) {
-		return (ButtonGroup) this.set("useMobileUI", value);
+	public ButtonGroup btnActiveLevel(Object value) {
+		return (ButtonGroup) this.set("btnActiveLevel", value);
+	}
+	
+	/**
+	 * 平铺展示？
+    */
+	public ButtonGroup tiled(Object value) {
+		return (ButtonGroup) this.set("tiled", value);
+	}
+	
+	/**
+	 * 按钮大小
+    * 可选值: xs | sm | md | lg
+    */
+	public ButtonGroup size(Object value) {
+		return (ButtonGroup) this.set("size", value);
+	}
+	
+	/**
+	 * 通过 JS 表达式来配置当前表单项的禁用状态。
+    */
+	public ButtonGroup disabledOn(Object value) {
+		return (ButtonGroup) this.set("disabledOn", value);
+	}
+	
+	/**
+	    */
+	public ButtonGroup staticSchema(Object value) {
+		return (ButtonGroup) this.set("staticSchema", value);
 	}
 	
 	/**
@@ -45,16 +67,45 @@ public class ButtonGroup extends BaseRenderer {
 	}
 	
 	/**
-	    */
-	public ButtonGroup btnClassName(Object value) {
-		return (ButtonGroup) this.set("btnClassName", value);
+	 * 垂直展示？
+    */
+	public ButtonGroup vertical(Object value) {
+		return (ButtonGroup) this.set("vertical", value);
 	}
 	
 	/**
-	 * 静态展示表单项Label类名
+	 * 静态展示表单项类名
     */
-	public ButtonGroup staticLabelClassName(Object value) {
-		return (ButtonGroup) this.set("staticLabelClassName", value);
+	public ButtonGroup staticClassName(Object value) {
+		return (ButtonGroup) this.set("staticClassName", value);
+	}
+	
+	/**
+	 * 编辑器配置，运行时可以忽略
+    */
+	public ButtonGroup editorSetting(Object value) {
+		return (ButtonGroup) this.set("editorSetting", value);
+	}
+	
+	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public ButtonGroup useMobileUI(Object value) {
+		return (ButtonGroup) this.set("useMobileUI", value);
+	}
+	
+	/**
+	 * 按钮样式级别
+    */
+	public ButtonGroup btnLevel(Object value) {
+		return (ButtonGroup) this.set("btnLevel", value);
+	}
+	
+	/**
+	 * 静态展示空值占位
+    */
+	public ButtonGroup staticPlaceholder(Object value) {
+		return (ButtonGroup) this.set("staticPlaceholder", value);
 	}
 	
 	/**
@@ -65,16 +116,17 @@ public class ButtonGroup extends BaseRenderer {
 	}
 	
 	/**
-	    */
-	public ButtonGroup staticSchema(Object value) {
-		return (ButtonGroup) this.set("staticSchema", value);
+	 * 是否显示
+    */
+	public ButtonGroup visible(Object value) {
+		return (ButtonGroup) this.set("visible", value);
 	}
 	
 	/**
-	 * 指定为提交按钮类型
+	 * 通过 JS 表达式来配置当前表单项是否显示
     */
-	public ButtonGroup type(Object value) {
-		return (ButtonGroup) this.set("type", value);
+	public ButtonGroup visibleOn(Object value) {
+		return (ButtonGroup) this.set("visibleOn", value);
 	}
 	
 	/**
@@ -85,10 +137,31 @@ public class ButtonGroup extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项类名
+	 * 是否静态展示表达式
     */
-	public ButtonGroup staticClassName(Object value) {
-		return (ButtonGroup) this.set("staticClassName", value);
+	public ButtonGroup staticOn(Object value) {
+		return (ButtonGroup) this.set("staticOn", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
+    */
+	public ButtonGroup $$id(Object value) {
+		return (ButtonGroup) this.set("$$id", value);
+	}
+	
+	/**
+	 * 是否隐藏
+    */
+	public ButtonGroup hidden(Object value) {
+		return (ButtonGroup) this.set("hidden", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public ButtonGroup staticLabelClassName(Object value) {
+		return (ButtonGroup) this.set("staticLabelClassName", value);
 	}
 	
 	/**
@@ -105,48 +178,6 @@ public class ButtonGroup extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否静态展示表达式
-    */
-	public ButtonGroup staticOn(Object value) {
-		return (ButtonGroup) this.set("staticOn", value);
-	}
-	
-	/**
-	 * 编辑器配置，运行时可以忽略
-    */
-	public ButtonGroup editorSetting(Object value) {
-		return (ButtonGroup) this.set("editorSetting", value);
-	}
-	
-	/**
-	 * 按钮样式级别
-    */
-	public ButtonGroup btnLevel(Object value) {
-		return (ButtonGroup) this.set("btnLevel", value);
-	}
-	
-	/**
-	 * 平铺展示？
-    */
-	public ButtonGroup tiled(Object value) {
-		return (ButtonGroup) this.set("tiled", value);
-	}
-	
-	/**
-	 * 是否隐藏
-    */
-	public ButtonGroup hidden(Object value) {
-		return (ButtonGroup) this.set("hidden", value);
-	}
-	
-	/**
-	 * 通过 JS 表达式来配置当前表单项是否显示
-    */
-	public ButtonGroup visibleOn(Object value) {
-		return (ButtonGroup) this.set("visibleOn", value);
-	}
-	
-	/**
 	 * 是否静态展示
     */
 	public ButtonGroup static_(Object value) {
@@ -154,46 +185,16 @@ public class ButtonGroup extends BaseRenderer {
 	}
 	
 	/**
-	 * 组件唯一 id，主要用于日志采集
+	 * 组件样式
     */
-	public ButtonGroup id(Object value) {
-		return (ButtonGroup) this.set("id", value);
+	public ButtonGroup style(Object value) {
+		return (ButtonGroup) this.set("style", value);
 	}
 	
 	/**
-	 * 按钮选中的样式级别
-    */
-	public ButtonGroup btnActiveLevel(Object value) {
-		return (ButtonGroup) this.set("btnActiveLevel", value);
-	}
-	
-	/**
-	 * 通过 JS 表达式来配置当前表单项的禁用状态。
-    */
-	public ButtonGroup disabledOn(Object value) {
-		return (ButtonGroup) this.set("disabledOn", value);
-	}
-	
-	/**
-	 * 静态展示空值占位
-    */
-	public ButtonGroup staticPlaceholder(Object value) {
-		return (ButtonGroup) this.set("staticPlaceholder", value);
-	}
-	
-	/**
-	 * 垂直展示？
-    */
-	public ButtonGroup vertical(Object value) {
-		return (ButtonGroup) this.set("vertical", value);
-	}
-	
-	/**
-	 * 按钮大小
-    * 可选值: xs | sm | md | lg
-    */
-	public ButtonGroup size(Object value) {
-		return (ButtonGroup) this.set("size", value);
+	    */
+	public ButtonGroup testid(Object value) {
+		return (ButtonGroup) this.set("testid", value);
 	}
 	
 	/**
@@ -208,5 +209,18 @@ public class ButtonGroup extends BaseRenderer {
     */
 	public ButtonGroup disabled(Object value) {
 		return (ButtonGroup) this.set("disabled", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于日志采集
+    */
+	public ButtonGroup id(Object value) {
+		return (ButtonGroup) this.set("id", value);
+	}
+	
+	/**
+	    */
+	public ButtonGroup testIdBuilder(Object value) {
+		return (ButtonGroup) this.set("testIdBuilder", value);
 	}
 	}

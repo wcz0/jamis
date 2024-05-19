@@ -11,11 +11,20 @@ public class ListBodyField extends BaseRenderer {
 		this.set("type", "listBodyField");
 	}
 
-	public ListBodyField set(String key, Object value) {
-		super.set(key, value);
-		return this;
+	/**
+	 * 列标题
+    */
+	public ListBodyField label(Object value) {
+		return (ListBodyField) this.set("label", value);
 	}
-
+	
+	/**
+	 * label 类名
+    */
+	public ListBodyField labelClassName(Object value) {
+		return (ListBodyField) this.set("labelClassName", value);
+	}
+	
 	/**
 	 * 内层组件的CSS类名
     */
@@ -49,19 +58,5 @@ public class ListBodyField extends BaseRenderer {
     */
 	public ListBodyField copyable(Object value) {
 		return (ListBodyField) this.set("copyable", value);
-	}
-	
-	/**
-	 * 列标题
-    */
-	public ListBodyField label(Object value) {
-		return (ListBodyField) this.set("label", value);
-	}
-	
-	/**
-	 * label 类名
-    */
-	public ListBodyField labelClassName(Object value) {
-		return (ListBodyField) this.set("labelClassName", value);
 	}
 	}

@@ -11,11 +11,6 @@ public class Card extends BaseRenderer {
 		this.set("type", "card");
 	}
 
-	public Card set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
 	 * 是否隐藏
     */
@@ -24,52 +19,66 @@ public class Card extends BaseRenderer {
 	}
 	
 	/**
-	 * 组件唯一 id，主要用于日志采集
+	 * 卡片内容区的表单项label是否使用Card内部的样式，默认为true
     */
-	public Card id(Object value) {
-		return (Card) this.set("id", value);
+	public Card useCardLabel(Object value) {
+		return (Card) this.set("useCardLabel", value);
 	}
 	
 	/**
-	 * 是否静态展示
+	 * 底部按钮集合。
     */
-	public Card static_(Object value) {
-		return (Card) this.set("static_", value);
+	public Card actions(Object value) {
+		return (Card) this.set("actions", value);
 	}
 	
 	/**
-	 * 静态展示空值占位
+	 * 是否显示
     */
-	public Card staticPlaceholder(Object value) {
-		return (Card) this.set("staticPlaceholder", value);
+	public Card visible(Object value) {
+		return (Card) this.set("visible", value);
 	}
 	
 	/**
-	 * 头部配置
+	 * 可以组件级别用来关闭移动端样式
     */
-	public Card header(Object value) {
-		return (Card) this.set("header", value);
+	public Card useMobileUI(Object value) {
+		return (Card) this.set("useMobileUI", value);
 	}
 	
 	/**
-	 * 是否禁用
+	 * 指定为 card 类型
     */
-	public Card disabled(Object value) {
-		return (Card) this.set("disabled", value);
+	public Card type(Object value) {
+		return (Card) this.set("type", value);
 	}
 	
 	/**
-	 * 是否隐藏表达式
+	 * 工具栏按钮
     */
-	public Card hiddenOn(Object value) {
-		return (Card) this.set("hiddenOn", value);
+	public Card toolbar(Object value) {
+		return (Card) this.set("toolbar", value);
 	}
 	
 	/**
-	 * 是否显示表达式
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
     */
-	public Card visibleOn(Object value) {
-		return (Card) this.set("visibleOn", value);
+	public Card $$id(Object value) {
+		return (Card) this.set("$$id", value);
+	}
+	
+	/**
+	 * 组件样式
+    */
+	public Card style(Object value) {
+		return (Card) this.set("style", value);
+	}
+	
+	/**
+	 * 多媒体区域
+    */
+	public Card media(Object value) {
+		return (Card) this.set("media", value);
 	}
 	
 	/**
@@ -87,34 +96,6 @@ public class Card extends BaseRenderer {
 	}
 	
 	/**
-	 * 容器 css 类名
-    */
-	public Card className(Object value) {
-		return (Card) this.set("className", value);
-	}
-	
-	/**
-	 * 是否显示
-    */
-	public Card visible(Object value) {
-		return (Card) this.set("visible", value);
-	}
-	
-	/**
-	 * 多媒体区域
-    */
-	public Card media(Object value) {
-		return (Card) this.set("media", value);
-	}
-	
-	/**
-	 * 卡片内容区的表单项label是否使用Card内部的样式，默认为true
-    */
-	public Card useCardLabel(Object value) {
-		return (Card) this.set("useCardLabel", value);
-	}
-	
-	/**
 	 * 是否禁用表达式
     */
 	public Card disabledOn(Object value) {
@@ -122,51 +103,30 @@ public class Card extends BaseRenderer {
 	}
 	
 	/**
-	 * 组件样式
+	 * 是否隐藏表达式
     */
-	public Card style(Object value) {
-		return (Card) this.set("style", value);
+	public Card hiddenOn(Object value) {
+		return (Card) this.set("hiddenOn", value);
 	}
 	
 	/**
-	 * 指定为 card 类型
+	 * 组件唯一 id，主要用于日志采集
     */
-	public Card type(Object value) {
-		return (Card) this.set("type", value);
-	}
-	
-	/**
-	 * 次要说明
-    */
-	public Card secondary(Object value) {
-		return (Card) this.set("secondary", value);
-	}
-	
-	/**
-	 * 是否静态展示表达式
-    */
-	public Card staticOn(Object value) {
-		return (Card) this.set("staticOn", value);
-	}
-	
-	/**
-	 * 静态展示表单项Label类名
-    */
-	public Card staticLabelClassName(Object value) {
-		return (Card) this.set("staticLabelClassName", value);
+	public Card id(Object value) {
+		return (Card) this.set("id", value);
 	}
 	
 	/**
 	    */
-	public Card staticSchema(Object value) {
-		return (Card) this.set("staticSchema", value);
+	public Card testid(Object value) {
+		return (Card) this.set("testid", value);
 	}
 	
 	/**
-	 * 静态展示表单项Value类名
+	 * 头部配置
     */
-	public Card staticInputClassName(Object value) {
-		return (Card) this.set("staticInputClassName", value);
+	public Card header(Object value) {
+		return (Card) this.set("header", value);
 	}
 	
 	/**
@@ -177,10 +137,37 @@ public class Card extends BaseRenderer {
 	}
 	
 	/**
-	 * 底部按钮集合。
+	 * 是否禁用
     */
-	public Card actions(Object value) {
-		return (Card) this.set("actions", value);
+	public Card disabled(Object value) {
+		return (Card) this.set("disabled", value);
+	}
+	
+	/**
+	 * 是否显示表达式
+    */
+	public Card visibleOn(Object value) {
+		return (Card) this.set("visibleOn", value);
+	}
+	
+	/**
+	 * 静态展示表单项Value类名
+    */
+	public Card staticInputClassName(Object value) {
+		return (Card) this.set("staticInputClassName", value);
+	}
+	
+	/**
+	    */
+	public Card testIdBuilder(Object value) {
+		return (Card) this.set("testIdBuilder", value);
+	}
+	
+	/**
+	 * 次要说明
+    */
+	public Card secondary(Object value) {
+		return (Card) this.set("secondary", value);
 	}
 	
 	/**
@@ -191,16 +178,43 @@ public class Card extends BaseRenderer {
 	}
 	
 	/**
-	 * 可以组件级别用来关闭移动端样式
+	 * 是否静态展示表达式
     */
-	public Card useMobileUI(Object value) {
-		return (Card) this.set("useMobileUI", value);
+	public Card staticOn(Object value) {
+		return (Card) this.set("staticOn", value);
 	}
 	
 	/**
-	 * 工具栏按钮
+	    */
+	public Card staticSchema(Object value) {
+		return (Card) this.set("staticSchema", value);
+	}
+	
+	/**
+	 * 容器 css 类名
     */
-	public Card toolbar(Object value) {
-		return (Card) this.set("toolbar", value);
+	public Card className(Object value) {
+		return (Card) this.set("className", value);
+	}
+	
+	/**
+	 * 静态展示空值占位
+    */
+	public Card staticPlaceholder(Object value) {
+		return (Card) this.set("staticPlaceholder", value);
+	}
+	
+	/**
+	 * 是否静态展示
+    */
+	public Card static_(Object value) {
+		return (Card) this.set("static_", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public Card staticLabelClassName(Object value) {
+		return (Card) this.set("staticLabelClassName", value);
 	}
 	}

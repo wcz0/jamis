@@ -10,51 +10,11 @@ public class GridColumn extends BaseRenderer {
 		this.set("type", "gridColumn");
 	}
 
-	public GridColumn set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
-	/**
-	 * 极小屏（<768px）时宽度占比
-    */
-	public GridColumn xs(Object value) {
-		return (GridColumn) this.set("xs", value);
-	}
-	
 	/**
 	 * 小屏时（>=768px）宽度占比
     */
 	public GridColumn sm(Object value) {
 		return (GridColumn) this.set("sm", value);
-	}
-	
-	/**
-	 * 中屏时(>=992px)宽度占比
-    */
-	public GridColumn md(Object value) {
-		return (GridColumn) this.set("md", value);
-	}
-	
-	/**
-	 * 大屏时(>=1200px)宽度占比
-    */
-	public GridColumn lg(Object value) {
-		return (GridColumn) this.set("lg", value);
-	}
-	
-	/**
-	 * 列类名
-    */
-	public GridColumn columnClassName(Object value) {
-		return (GridColumn) this.set("columnClassName", value);
-	}
-	
-	/**
-	 * 样式
-    */
-	public GridColumn style(Object value) {
-		return (GridColumn) this.set("style", value);
 	}
 	
 	/**
@@ -74,6 +34,34 @@ public class GridColumn extends BaseRenderer {
 	}
 	
 	/**
+	 * 列类名
+    */
+	public GridColumn columnClassName(Object value) {
+		return (GridColumn) this.set("columnClassName", value);
+	}
+	
+	/**
+	 * 极小屏（<768px）时宽度占比
+    */
+	public GridColumn xs(Object value) {
+		return (GridColumn) this.set("xs", value);
+	}
+	
+	/**
+	 * 中屏时(>=992px)宽度占比
+    */
+	public GridColumn md(Object value) {
+		return (GridColumn) this.set("md", value);
+	}
+	
+	/**
+	 * 大屏时(>=1200px)宽度占比
+    */
+	public GridColumn lg(Object value) {
+		return (GridColumn) this.set("lg", value);
+	}
+	
+	/**
 	 * 如果是水平排版，这个属性可以细化水平排版的左右宽度占比。
     */
 	public GridColumn horizontal(Object value) {
@@ -84,5 +72,12 @@ public class GridColumn extends BaseRenderer {
 	    */
 	public GridColumn body(Object value) {
 		return (GridColumn) this.set("body", value);
+	}
+	
+	/**
+	 * 样式
+    */
+	public GridColumn style(Object value) {
+		return (GridColumn) this.set("style", value);
 	}
 	}

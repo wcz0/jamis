@@ -11,37 +11,11 @@ public class Link extends BaseRenderer {
 		this.set("type", "link");
 	}
 
-	public Link set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 是否禁用表达式
+	 * 是否禁用
     */
-	public Link disabledOn(Object value) {
-		return (Link) this.set("disabledOn", value);
-	}
-	
-	/**
-	 * 是否隐藏
-    */
-	public Link hidden(Object value) {
-		return (Link) this.set("hidden", value);
-	}
-	
-	/**
-	 * 组件唯一 id，主要用于日志采集
-    */
-	public Link id(Object value) {
-		return (Link) this.set("id", value);
-	}
-	
-	/**
-	 * 是否静态展示表达式
-    */
-	public Link staticOn(Object value) {
-		return (Link) this.set("staticOn", value);
+	public Link disabled(Object value) {
+		return (Link) this.set("disabled", value);
 	}
 	
 	/**
@@ -52,45 +26,16 @@ public class Link extends BaseRenderer {
 	}
 	
 	/**
-	 * 容器 css 类名
-    */
-	public Link className(Object value) {
-		return (Link) this.set("className", value);
+	    */
+	public Link staticSchema(Object value) {
+		return (Link) this.set("staticSchema", value);
 	}
 	
 	/**
-	 * 是否隐藏表达式
+	 * 角标
     */
-	public Link hiddenOn(Object value) {
-		return (Link) this.set("hiddenOn", value);
-	}
-	
-	/**
-	 * 是否显示表达式
-    */
-	public Link visibleOn(Object value) {
-		return (Link) this.set("visibleOn", value);
-	}
-	
-	/**
-	 * 是否禁用
-    */
-	public Link disabled(Object value) {
-		return (Link) this.set("disabled", value);
-	}
-	
-	/**
-	 * 是否新窗口打开。
-    */
-	public Link blank(Object value) {
-		return (Link) this.set("blank", value);
-	}
-	
-	/**
-	 * 图标
-    */
-	public Link icon(Object value) {
-		return (Link) this.set("icon", value);
+	public Link badge(Object value) {
+		return (Link) this.set("badge", value);
 	}
 	
 	/**
@@ -108,72 +53,10 @@ public class Link extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否静态展示
-    */
-	public Link static_(Object value) {
-		return (Link) this.set("static_", value);
-	}
-	
-	/**
 	 * 组件样式
     */
 	public Link style(Object value) {
 		return (Link) this.set("style", value);
-	}
-	
-	/**
-	 * 链接内容，如果不配置将显示链接地址。
-    */
-	public Link body(Object value) {
-		return (Link) this.set("body", value);
-	}
-	
-	/**
-	 * 角标
-    */
-	public Link badge(Object value) {
-		return (Link) this.set("badge", value);
-	}
-	
-	/**
-	 * 可以组件级别用来关闭移动端样式
-    */
-	public Link useMobileUI(Object value) {
-		return (Link) this.set("useMobileUI", value);
-	}
-	
-	/**
-	 * 指定为 link 链接展示控件
-    */
-	public Link type(Object value) {
-		return (Link) this.set("type", value);
-	}
-	
-	/**
-	    */
-	public Link staticSchema(Object value) {
-		return (Link) this.set("staticSchema", value);
-	}
-	
-	/**
-	 * 编辑器配置，运行时可以忽略
-    */
-	public Link editorSetting(Object value) {
-		return (Link) this.set("editorSetting", value);
-	}
-	
-	/**
-	 * 链接地址
-    */
-	public Link href(Object value) {
-		return (Link) this.set("href", value);
-	}
-	
-	/**
-	 * a标签原生target属性
-    */
-	public Link htmlTarget(Object value) {
-		return (Link) this.set("htmlTarget", value);
 	}
 	
 	/**
@@ -198,9 +81,140 @@ public class Link extends BaseRenderer {
 	}
 	
 	/**
+	 * 编辑器配置，运行时可以忽略
+    */
+	public Link editorSetting(Object value) {
+		return (Link) this.set("editorSetting", value);
+	}
+	
+	/**
+	    */
+	public Link testIdBuilder(Object value) {
+		return (Link) this.set("testIdBuilder", value);
+	}
+	
+	/**
+	    */
+	public Link testid(Object value) {
+		return (Link) this.set("testid", value);
+	}
+	
+	/**
+	 * 是否隐藏
+    */
+	public Link hidden(Object value) {
+		return (Link) this.set("hidden", value);
+	}
+	
+	/**
+	 * 是否静态展示表达式
+    */
+	public Link staticOn(Object value) {
+		return (Link) this.set("staticOn", value);
+	}
+	
+	/**
+	 * 是否新窗口打开。
+    */
+	public Link blank(Object value) {
+		return (Link) this.set("blank", value);
+	}
+	
+	/**
+	 * 链接内容，如果不配置将显示链接地址。
+    */
+	public Link body(Object value) {
+		return (Link) this.set("body", value);
+	}
+	
+	/**
+	 * 图标
+    */
+	public Link icon(Object value) {
+		return (Link) this.set("icon", value);
+	}
+	
+	/**
+	 * 容器 css 类名
+    */
+	public Link className(Object value) {
+		return (Link) this.set("className", value);
+	}
+	
+	/**
+	 * 指定为 link 链接展示控件
+    */
+	public Link type(Object value) {
+		return (Link) this.set("type", value);
+	}
+	
+	/**
+	 * 是否禁用表达式
+    */
+	public Link disabledOn(Object value) {
+		return (Link) this.set("disabledOn", value);
+	}
+	
+	/**
+	 * 是否显示表达式
+    */
+	public Link visibleOn(Object value) {
+		return (Link) this.set("visibleOn", value);
+	}
+	
+	/**
+	 * 是否静态展示
+    */
+	public Link static_(Object value) {
+		return (Link) this.set("static_", value);
+	}
+	
+	/**
+	 * 链接地址
+    */
+	public Link href(Object value) {
+		return (Link) this.set("href", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
+    */
+	public Link $$id(Object value) {
+		return (Link) this.set("$$id", value);
+	}
+	
+	/**
+	 * 是否隐藏表达式
+    */
+	public Link hiddenOn(Object value) {
+		return (Link) this.set("hiddenOn", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于日志采集
+    */
+	public Link id(Object value) {
+		return (Link) this.set("id", value);
+	}
+	
+	/**
 	 * 静态展示空值占位
     */
 	public Link staticPlaceholder(Object value) {
 		return (Link) this.set("staticPlaceholder", value);
+	}
+	
+	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public Link useMobileUI(Object value) {
+		return (Link) this.set("useMobileUI", value);
+	}
+	
+	/**
+	 * a标签原生target属性
+    */
+	public Link htmlTarget(Object value) {
+		return (Link) this.set("htmlTarget", value);
 	}
 	}

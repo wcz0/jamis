@@ -11,17 +11,33 @@ public class Badge extends BaseRenderer {
 		this.set("type", "badge");
 	}
 
-	public Badge set(String key, Object value) {
-		super.set(key, value);
-		return this;
+	/**
+	 * 角标的自定义样式
+    */
+	public Badge style(Object value) {
+		return (Badge) this.set("style", value);
 	}
-
+	
 	/**
 	 * 角标类型
     * 可选值: text | dot | ribbon
     */
 	public Badge mode(Object value) {
 		return (Badge) this.set("mode", value);
+	}
+	
+	/**
+	 * 角标位置，相对于position的位置进行偏移
+    */
+	public Badge offset(Object value) {
+		return (Badge) this.set("offset", value);
+	}
+	
+	/**
+	 * 大小
+    */
+	public Badge size(Object value) {
+		return (Badge) this.set("size", value);
 	}
 	
 	/**
@@ -33,10 +49,31 @@ public class Badge extends BaseRenderer {
 	}
 	
 	/**
+	 * 封顶的数字值
+    */
+	public Badge overflowCount(Object value) {
+		return (Badge) this.set("overflowCount", value);
+	}
+	
+	/**
 	 * 动态控制是否显示
     */
 	public Badge visibleOn(Object value) {
 		return (Badge) this.set("visibleOn", value);
+	}
+	
+	/**
+	 * 是否显示动画
+    */
+	public Badge animation(Object value) {
+		return (Badge) this.set("animation", value);
+	}
+	
+	/**
+	 * 提示类型
+    */
+	public Badge level(Object value) {
+		return (Badge) this.set("level", value);
 	}
 	
 	/**
@@ -50,47 +87,5 @@ public class Badge extends BaseRenderer {
     */
 	public Badge text(Object value) {
 		return (Badge) this.set("text", value);
-	}
-	
-	/**
-	 * 封顶的数字值
-    */
-	public Badge overflowCount(Object value) {
-		return (Badge) this.set("overflowCount", value);
-	}
-	
-	/**
-	 * 是否显示动画
-    */
-	public Badge animation(Object value) {
-		return (Badge) this.set("animation", value);
-	}
-	
-	/**
-	 * 角标的自定义样式
-    */
-	public Badge style(Object value) {
-		return (Badge) this.set("style", value);
-	}
-	
-	/**
-	 * 提示类型
-    */
-	public Badge level(Object value) {
-		return (Badge) this.set("level", value);
-	}
-	
-	/**
-	 * 大小
-    */
-	public Badge size(Object value) {
-		return (Badge) this.set("size", value);
-	}
-	
-	/**
-	 * 角标位置，相对于position的位置进行偏移
-    */
-	public Badge offset(Object value) {
-		return (Badge) this.set("offset", value);
 	}
 	}

@@ -11,18 +11,6 @@ public class SchemaMessage extends BaseRenderer {
 		this.set("type", "schemaMessage");
 	}
 
-	public SchemaMessage set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
-	/**
-	 * 获取失败时的提示
-    */
-	public SchemaMessage fetchFailed(Object value) {
-		return (SchemaMessage) this.set("fetchFailed", value);
-	}
-	
 	/**
 	 * 获取成功的提示，默认为空。
     */
@@ -42,5 +30,12 @@ public class SchemaMessage extends BaseRenderer {
     */
 	public SchemaMessage saveSuccess(Object value) {
 		return (SchemaMessage) this.set("saveSuccess", value);
+	}
+	
+	/**
+	 * 获取失败时的提示
+    */
+	public SchemaMessage fetchFailed(Object value) {
+		return (SchemaMessage) this.set("fetchFailed", value);
 	}
 	}

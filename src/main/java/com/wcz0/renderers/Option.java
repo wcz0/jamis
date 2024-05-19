@@ -10,23 +10,18 @@ public class Option extends BaseRenderer {
 		this.set("type", "option");
 	}
 
-	public Option set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 请保证数值唯一，多个选项值一致会认为是同一个选项。
+	 * 用来显示的文字
     */
-	public Option value(Object value) {
-		return (Option) this.set("value", value);
+	public Option label(Object value) {
+		return (Option) this.set("label", value);
 	}
 	
 	/**
-	 * 是否可见
+	 * 是否禁用
     */
-	public Option visible(Object value) {
-		return (Option) this.set("visible", value);
+	public Option disabled(Object value) {
+		return (Option) this.set("disabled", value);
 	}
 	
 	/**
@@ -34,13 +29,6 @@ public class Option extends BaseRenderer {
     */
 	public Option hidden(Object value) {
 		return (Option) this.set("hidden", value);
-	}
-	
-	/**
-	 * 描述，部分控件支持
-    */
-	public Option description(Object value) {
-		return (Option) this.set("description", value);
 	}
 	
 	/**
@@ -58,20 +46,6 @@ public class Option extends BaseRenderer {
 	}
 	
 	/**
-	 * 只有设置了 defer 才有意义，内部字段不可以外部设置
-    */
-	public Option loaded(Object value) {
-		return (Option) this.set("loaded", value);
-	}
-	
-	/**
-	 * 用来显示的文字
-    */
-	public Option label(Object value) {
-		return (Option) this.set("label", value);
-	}
-	
-	/**
 	 * 可以用来给 Option 标记个范围，让数据展示更清晰。这个只有在数值展示的时候显示。
     */
 	public Option scopeLabel(Object value) {
@@ -79,10 +53,10 @@ public class Option extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否禁用
+	 * 请保证数值唯一，多个选项值一致会认为是同一个选项。
     */
-	public Option disabled(Object value) {
-		return (Option) this.set("disabled", value);
+	public Option value(Object value) {
+		return (Option) this.set("value", value);
 	}
 	
 	/**
@@ -93,9 +67,30 @@ public class Option extends BaseRenderer {
 	}
 	
 	/**
+	 * 是否可见
+    */
+	public Option visible(Object value) {
+		return (Option) this.set("visible", value);
+	}
+	
+	/**
+	 * 描述，部分控件支持
+    */
+	public Option description(Object value) {
+		return (Option) this.set("description", value);
+	}
+	
+	/**
 	 * 标记后数据延时加载
     */
 	public Option defer(Object value) {
 		return (Option) this.set("defer", value);
+	}
+	
+	/**
+	 * 只有设置了 defer 才有意义，内部字段不可以外部设置
+    */
+	public Option loaded(Object value) {
+		return (Option) this.set("loaded", value);
 	}
 	}

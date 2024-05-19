@@ -11,50 +11,11 @@ public class Image extends BaseRenderer {
 		this.set("type", "image");
 	}
 
-	public Image set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 是否隐藏表达式
+	 * 图片说明文字
     */
-	public Image hiddenOn(Object value) {
-		return (Image) this.set("hiddenOn", value);
-	}
-	
-	/**
-	 * 静态展示表单项Value类名
-    */
-	public Image staticInputClassName(Object value) {
-		return (Image) this.set("staticInputClassName", value);
-	}
-	
-	/**
-	 * 关联字段名，也可以直接配置 src
-    */
-	public Image name(Object value) {
-		return (Image) this.set("name", value);
-	}
-	
-	/**
-	 * 工具栏配置
-    */
-	public Image toolbarActions(Object value) {
-		return (Image) this.set("toolbarActions", value);
-	}
-	
-	/**
-	 * 是否显示表达式
-    */
-	public Image visibleOn(Object value) {
-		return (Image) this.set("visibleOn", value);
-	}
-	
-	/**
-	    */
-	public Image staticSchema(Object value) {
-		return (Image) this.set("staticSchema", value);
+	public Image caption(Object value) {
+		return (Image) this.set("caption", value);
 	}
 	
 	/**
@@ -65,38 +26,57 @@ public class Image extends BaseRenderer {
 	}
 	
 	/**
-	 * 链接的 target
+	 * 事件动作配置
     */
-	public Image htmlTarget(Object value) {
-		return (Image) this.set("htmlTarget", value);
+	public Image onEvent(Object value) {
+		return (Image) this.set("onEvent", value);
 	}
 	
 	/**
-	 * 是否隐藏
+	 * 是否静态展示
     */
-	public Image hidden(Object value) {
-		return (Image) this.set("hidden", value);
+	public Image static_(Object value) {
+		return (Image) this.set("static_", value);
 	}
 	
 	/**
-	 * 是否禁用表达式
+	 * 是否静态展示表达式
     */
-	public Image disabledOn(Object value) {
-		return (Image) this.set("disabledOn", value);
+	public Image staticOn(Object value) {
+		return (Image) this.set("staticOn", value);
 	}
 	
 	/**
-	 * 是否显示
+	 * 是否新窗口打开
     */
-	public Image visible(Object value) {
-		return (Image) this.set("visible", value);
+	public Image blank(Object value) {
+		return (Image) this.set("blank", value);
 	}
 	
 	/**
-	 * 组件样式
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
     */
-	public Image style(Object value) {
-		return (Image) this.set("style", value);
+	public Image $$id(Object value) {
+		return (Image) this.set("$$id", value);
+	}
+	
+	/**
+	    */
+	public Image staticSchema(Object value) {
+		return (Image) this.set("staticSchema", value);
+	}
+	
+	/**
+	    */
+	public Image testIdBuilder(Object value) {
+		return (Image) this.set("testIdBuilder", value);
+	}
+	
+	/**
+	 * 静态展示空值占位
+    */
+	public Image staticPlaceholder(Object value) {
+		return (Image) this.set("staticPlaceholder", value);
 	}
 	
 	/**
@@ -104,77 +84,6 @@ public class Image extends BaseRenderer {
     */
 	public Image editorSetting(Object value) {
 		return (Image) this.set("editorSetting", value);
-	}
-	
-	/**
-	 * 可以组件级别用来关闭移动端样式
-    */
-	public Image useMobileUI(Object value) {
-		return (Image) this.set("useMobileUI", value);
-	}
-	
-	/**
-	 * 图片无法显示时的替换文本
-    */
-	public Image alt(Object value) {
-		return (Image) this.set("alt", value);
-	}
-	
-	/**
-	 * 宽度
-    */
-	public Image width(Object value) {
-		return (Image) this.set("width", value);
-	}
-	
-	/**
-	 * 外层 css 类名
-    */
-	public Image className(Object value) {
-		return (Image) this.set("className", value);
-	}
-	
-	/**
-	 * 图片展示模式，默认为缩略图模式、可以配置成原图模式
-    * 可选值: thumb | original
-    */
-	public Image imageMode(Object value) {
-		return (Image) this.set("imageMode", value);
-	}
-	
-	/**
-	 * 放大详情图 CSS 类名
-    */
-	public Image imageGallaryClassName(Object value) {
-		return (Image) this.set("imageGallaryClassName", value);
-	}
-	
-	/**
-	 * 放大时是否显示图片集
-    */
-	public Image enlargeWithGallary(Object value) {
-		return (Image) this.set("enlargeWithGallary", value);
-	}
-	
-	/**
-	 * 组件内层 css 类名
-    */
-	public Image innerClassName(Object value) {
-		return (Image) this.set("innerClassName", value);
-	}
-	
-	/**
-	 * 大图地址，不设置用 src
-    */
-	public Image originalSrc(Object value) {
-		return (Image) this.set("originalSrc", value);
-	}
-	
-	/**
-	 * 静态展示表单项Label类名
-    */
-	public Image staticLabelClassName(Object value) {
-		return (Image) this.set("staticLabelClassName", value);
 	}
 	
 	/**
@@ -186,31 +95,31 @@ public class Image extends BaseRenderer {
 	}
 	
 	/**
-	 * 图片标题
+	 * 放大时是否显示图片集
     */
-	public Image title(Object value) {
-		return (Image) this.set("title", value);
+	public Image enlargeWithGallary(Object value) {
+		return (Image) this.set("enlargeWithGallary", value);
 	}
 	
 	/**
-	 * 图片描述信息
+	 * 宽度
     */
-	public Image imageCaption(Object value) {
-		return (Image) this.set("imageCaption", value);
+	public Image width(Object value) {
+		return (Image) this.set("width", value);
 	}
 	
 	/**
-	 * 图片 css 类名
+	 * 是否隐藏
     */
-	public Image imageClassName(Object value) {
-		return (Image) this.set("imageClassName", value);
+	public Image hidden(Object value) {
+		return (Image) this.set("hidden", value);
 	}
 	
 	/**
-	 * 图片说明文字
+	 * 是否显示表达式
     */
-	public Image caption(Object value) {
-		return (Image) this.set("caption", value);
+	public Image visibleOn(Object value) {
+		return (Image) this.set("visibleOn", value);
 	}
 	
 	/**
@@ -222,17 +131,17 @@ public class Image extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否禁用
+	 * 静态展示表单项Label类名
     */
-	public Image disabled(Object value) {
-		return (Image) this.set("disabled", value);
+	public Image staticLabelClassName(Object value) {
+		return (Image) this.set("staticLabelClassName", value);
 	}
 	
 	/**
-	 * 图片地址，如果配置了 name，这个属性不用配置。
+	 * 图片描述信息
     */
-	public Image src(Object value) {
-		return (Image) this.set("src", value);
+	public Image imageCaption(Object value) {
+		return (Image) this.set("imageCaption", value);
 	}
 	
 	/**
@@ -240,6 +149,70 @@ public class Image extends BaseRenderer {
     */
 	public Image thumbClassName(Object value) {
 		return (Image) this.set("thumbClassName", value);
+	}
+	
+	/**
+	 * 图片展示模式，默认为缩略图模式、可以配置成原图模式
+    * 可选值: thumb | original
+    */
+	public Image imageMode(Object value) {
+		return (Image) this.set("imageMode", value);
+	}
+	
+	/**
+	 * 链接的 target
+    */
+	public Image htmlTarget(Object value) {
+		return (Image) this.set("htmlTarget", value);
+	}
+	
+	/**
+	 * 外层 css 类名
+    */
+	public Image className(Object value) {
+		return (Image) this.set("className", value);
+	}
+	
+	/**
+	 * 是否显示
+    */
+	public Image visible(Object value) {
+		return (Image) this.set("visible", value);
+	}
+	
+	/**
+	 * 静态展示表单项类名
+    */
+	public Image staticClassName(Object value) {
+		return (Image) this.set("staticClassName", value);
+	}
+	
+	/**
+	 * 是否展示图片工具栏
+    */
+	public Image showToolbar(Object value) {
+		return (Image) this.set("showToolbar", value);
+	}
+	
+	/**
+	 * 组件样式
+    */
+	public Image style(Object value) {
+		return (Image) this.set("style", value);
+	}
+	
+	/**
+	 * 大图地址，不设置用 src
+    */
+	public Image originalSrc(Object value) {
+		return (Image) this.set("originalSrc", value);
+	}
+	
+	/**
+	 * 组件内层 css 类名
+    */
+	public Image innerClassName(Object value) {
+		return (Image) this.set("innerClassName", value);
 	}
 	
 	/**
@@ -251,6 +224,20 @@ public class Image extends BaseRenderer {
 	}
 	
 	/**
+	 * 工具栏配置
+    */
+	public Image toolbarActions(Object value) {
+		return (Image) this.set("toolbarActions", value);
+	}
+	
+	/**
+	 * 静态展示表单项Value类名
+    */
+	public Image staticInputClassName(Object value) {
+		return (Image) this.set("staticInputClassName", value);
+	}
+	
+	/**
 	 * 默认图片地址
     */
 	public Image defaultImage(Object value) {
@@ -258,17 +245,10 @@ public class Image extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否静态展示表达式
+	 * 关联字段名，也可以直接配置 src
     */
-	public Image staticOn(Object value) {
-		return (Image) this.set("staticOn", value);
-	}
-	
-	/**
-	 * 静态展示表单项类名
-    */
-	public Image staticClassName(Object value) {
-		return (Image) this.set("staticClassName", value);
+	public Image name(Object value) {
+		return (Image) this.set("name", value);
 	}
 	
 	/**
@@ -279,6 +259,13 @@ public class Image extends BaseRenderer {
 	}
 	
 	/**
+	 * 是否禁用表达式
+    */
+	public Image disabledOn(Object value) {
+		return (Image) this.set("disabledOn", value);
+	}
+	
+	/**
 	 * 组件唯一 id，主要用于日志采集
     */
 	public Image id(Object value) {
@@ -286,17 +273,30 @@ public class Image extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否静态展示
+	 * 图片地址，如果配置了 name，这个属性不用配置。
     */
-	public Image static_(Object value) {
-		return (Image) this.set("static_", value);
+	public Image src(Object value) {
+		return (Image) this.set("src", value);
 	}
 	
 	/**
-	 * 静态展示空值占位
+	    */
+	public Image testid(Object value) {
+		return (Image) this.set("testid", value);
+	}
+	
+	/**
+	 * 图片标题
     */
-	public Image staticPlaceholder(Object value) {
-		return (Image) this.set("staticPlaceholder", value);
+	public Image title(Object value) {
+		return (Image) this.set("title", value);
+	}
+	
+	/**
+	 * 图片无法显示时的替换文本
+    */
+	public Image alt(Object value) {
+		return (Image) this.set("alt", value);
 	}
 	
 	/**
@@ -307,23 +307,37 @@ public class Image extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否新窗口打开
+	 * 图片 css 类名
     */
-	public Image blank(Object value) {
-		return (Image) this.set("blank", value);
+	public Image imageClassName(Object value) {
+		return (Image) this.set("imageClassName", value);
 	}
 	
 	/**
-	 * 是否展示图片工具栏
+	 * 是否禁用
     */
-	public Image showToolbar(Object value) {
-		return (Image) this.set("showToolbar", value);
+	public Image disabled(Object value) {
+		return (Image) this.set("disabled", value);
 	}
 	
 	/**
-	 * 事件动作配置
+	 * 是否隐藏表达式
     */
-	public Image onEvent(Object value) {
-		return (Image) this.set("onEvent", value);
+	public Image hiddenOn(Object value) {
+		return (Image) this.set("hiddenOn", value);
+	}
+	
+	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public Image useMobileUI(Object value) {
+		return (Image) this.set("useMobileUI", value);
+	}
+	
+	/**
+	 * 放大详情图 CSS 类名
+    */
+	public Image imageGallaryClassName(Object value) {
+		return (Image) this.set("imageGallaryClassName", value);
 	}
 	}

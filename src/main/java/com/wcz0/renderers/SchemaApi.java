@@ -10,45 +10,11 @@ public class SchemaApi extends BaseRenderer {
 		this.set("type", "schemaApi");
 	}
 
-	public SchemaApi set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * autoFill 是否显示自动填充错误提示
+	 * 默认数据映射中的key如果带点，或者带大括号，会转成对象比如：{   'a.b': '123' }经过数据映射后变成 {  a: {   b: '123  } }如果想要关闭此功能，请设置 convertKeyToPath 为 false
     */
-	public SchemaApi silent(Object value) {
-		return (SchemaApi) this.set("silent", value);
-	}
-	
-	/**
-	 * 用来做接口返回的数据映射。
-    */
-	public SchemaApi responseData(Object value) {
-		return (SchemaApi) this.set("responseData", value);
-	}
-	
-	/**
-	 * 发送体的格式
-    * 可选值: json | form-data | form
-    */
-	public SchemaApi dataType(Object value) {
-		return (SchemaApi) this.set("dataType", value);
-	}
-	
-	/**
-	 * 当开启自动刷新的时候，默认是 api 的 url 来自动跟踪变量变化的。 如果你希望监控 url 外的变量，请配置 trackExpression。
-    */
-	public SchemaApi trackExpression(Object value) {
-		return (SchemaApi) this.set("trackExpression", value);
-	}
-	
-	/**
-	 * 强制将数据附加在 query，默认只有 api 地址中没有用变量的时候 crud 查询接口才会 自动附加数据到 query 部分，如果想强制附加请设置这个属性。 对于那种临时加了个变量但是又不想全部参数写一遍的时候配置很有用。
-    */
-	public SchemaApi forceAppendDataToQuery(Object value) {
-		return (SchemaApi) this.set("forceAppendDataToQuery", value);
+	public SchemaApi convertKeyToPath(Object value) {
+		return (SchemaApi) this.set("convertKeyToPath", value);
 	}
 	
 	/**
@@ -56,6 +22,13 @@ public class SchemaApi extends BaseRenderer {
     */
 	public SchemaApi replaceData(Object value) {
 		return (SchemaApi) this.set("replaceData", value);
+	}
+	
+	/**
+	 * 当开启自动刷新的时候，默认是 api 的 url 来自动跟踪变量变化的。 如果你希望监控 url 外的变量，请配置 trackExpression。
+    */
+	public SchemaApi trackExpression(Object value) {
+		return (SchemaApi) this.set("trackExpression", value);
 	}
 	
 	/**
@@ -80,10 +53,24 @@ public class SchemaApi extends BaseRenderer {
 	}
 	
 	/**
-	 * 设置发送条件
+	 * qs 配置项
     */
-	public SchemaApi sendOn(Object value) {
-		return (SchemaApi) this.set("sendOn", value);
+	public SchemaApi qsOptions(Object value) {
+		return (SchemaApi) this.set("qsOptions", value);
+	}
+	
+	/**
+	 * autoFill 是否显示自动填充错误提示
+    */
+	public SchemaApi silent(Object value) {
+		return (SchemaApi) this.set("silent", value);
+	}
+	
+	/**
+	 * 文件下载时，指定文件名
+    */
+	public SchemaApi downloadFileName(Object value) {
+		return (SchemaApi) this.set("downloadFileName", value);
 	}
 	
 	/**
@@ -102,17 +89,10 @@ public class SchemaApi extends BaseRenderer {
 	}
 	
 	/**
-	 * 默认数据映射中的key如果带点，或者带大括号，会转成对象比如：{   'a.b': '123' }经过数据映射后变成 {  a: {   b: '123  } }如果想要关闭此功能，请设置 convertKeyToPath 为 false
+	 * 用来做接口返回的数据映射。
     */
-	public SchemaApi convertKeyToPath(Object value) {
-		return (SchemaApi) this.set("convertKeyToPath", value);
-	}
-	
-	/**
-	 * qs 配置项
-    */
-	public SchemaApi qsOptions(Object value) {
-		return (SchemaApi) this.set("qsOptions", value);
+	public SchemaApi responseData(Object value) {
+		return (SchemaApi) this.set("responseData", value);
 	}
 	
 	/**
@@ -123,10 +103,10 @@ public class SchemaApi extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否自动刷新，当 url 中的取值结果变化时，自动刷新数据。
+	 * 设置发送条件
     */
-	public SchemaApi autoRefresh(Object value) {
-		return (SchemaApi) this.set("autoRefresh", value);
+	public SchemaApi sendOn(Object value) {
+		return (SchemaApi) this.set("sendOn", value);
 	}
 	
 	/**
@@ -137,9 +117,24 @@ public class SchemaApi extends BaseRenderer {
 	}
 	
 	/**
-	 * 文件下载时，指定文件名
+	 * 强制将数据附加在 query，默认只有 api 地址中没有用变量的时候 crud 查询接口才会 自动附加数据到 query 部分，如果想强制附加请设置这个属性。 对于那种临时加了个变量但是又不想全部参数写一遍的时候配置很有用。
     */
-	public SchemaApi downloadFileName(Object value) {
-		return (SchemaApi) this.set("downloadFileName", value);
+	public SchemaApi forceAppendDataToQuery(Object value) {
+		return (SchemaApi) this.set("forceAppendDataToQuery", value);
+	}
+	
+	/**
+	 * 发送体的格式
+    * 可选值: json | form-data | form
+    */
+	public SchemaApi dataType(Object value) {
+		return (SchemaApi) this.set("dataType", value);
+	}
+	
+	/**
+	 * 是否自动刷新，当 url 中的取值结果变化时，自动刷新数据。
+    */
+	public SchemaApi autoRefresh(Object value) {
+		return (SchemaApi) this.set("autoRefresh", value);
 	}
 	}

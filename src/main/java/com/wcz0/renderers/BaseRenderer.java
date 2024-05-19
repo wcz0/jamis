@@ -12,6 +12,10 @@ public class BaseRenderer {
     public String type;
     public Map<String, Object> amisSchema = new HashMap<>();
 
+    public static BaseRenderer make() {
+        return new BaseRenderer();
+    }
+
     public BaseRenderer set(String name, Object value) {
         if ("map".equals(name) && value instanceof Map) {
             Map mapValue = (Map) value;

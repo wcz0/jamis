@@ -10,25 +10,6 @@ public class RowSelection extends BaseRenderer {
 		this.set("type", "rowSelection");
 	}
 
-	public RowSelection set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
-	/**
-	 * 行是否禁用表达式
-    */
-	public RowSelection disableOn(Object value) {
-		return (RowSelection) this.set("disableOn", value);
-	}
-	
-	/**
-	 * 自定义选择菜单
-    */
-	public RowSelection selections(Object value) {
-		return (RowSelection) this.set("selections", value);
-	}
-	
 	/**
 	 * 已选择的key值
     */
@@ -69,5 +50,19 @@ public class RowSelection extends BaseRenderer {
     */
 	public RowSelection keyField(Object value) {
 		return (RowSelection) this.set("keyField", value);
+	}
+	
+	/**
+	 * 行是否禁用表达式
+    */
+	public RowSelection disableOn(Object value) {
+		return (RowSelection) this.set("disableOn", value);
+	}
+	
+	/**
+	 * 自定义选择菜单
+    */
+	public RowSelection selections(Object value) {
+		return (RowSelection) this.set("selections", value);
 	}
 	}

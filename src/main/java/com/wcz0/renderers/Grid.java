@@ -11,17 +11,11 @@ public class Grid extends BaseRenderer {
 		this.set("type", "grid");
 	}
 
-	public Grid set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 垂直对齐方式
-    * 可选值: top | middle | bottom | between
+	 * 容器 css 类名
     */
-	public Grid valign(Object value) {
-		return (Grid) this.set("valign", value);
+	public Grid className(Object value) {
+		return (Grid) this.set("className", value);
 	}
 	
 	/**
@@ -33,24 +27,10 @@ public class Grid extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否隐藏
+	 * 是否显示表达式
     */
-	public Grid hidden(Object value) {
-		return (Grid) this.set("hidden", value);
-	}
-	
-	/**
-	 * 组件唯一 id，主要用于日志采集
-    */
-	public Grid id(Object value) {
-		return (Grid) this.set("id", value);
-	}
-	
-	/**
-	 * 事件动作配置
-    */
-	public Grid onEvent(Object value) {
-		return (Grid) this.set("onEvent", value);
+	public Grid visibleOn(Object value) {
+		return (Grid) this.set("visibleOn", value);
 	}
 	
 	/**
@@ -61,79 +41,10 @@ public class Grid extends BaseRenderer {
 	}
 	
 	/**
-	 * 编辑器配置，运行时可以忽略
-    */
-	public Grid editorSetting(Object value) {
-		return (Grid) this.set("editorSetting", value);
-	}
-	
-	/**
 	 * 可以组件级别用来关闭移动端样式
     */
 	public Grid useMobileUI(Object value) {
 		return (Grid) this.set("useMobileUI", value);
-	}
-	
-	/**
-	 * 是否禁用
-    */
-	public Grid disabled(Object value) {
-		return (Grid) this.set("disabled", value);
-	}
-	
-	/**
-	 * 是否禁用表达式
-    */
-	public Grid disabledOn(Object value) {
-		return (Grid) this.set("disabledOn", value);
-	}
-	
-	/**
-	 * 是否显示
-    */
-	public Grid visible(Object value) {
-		return (Grid) this.set("visible", value);
-	}
-	
-	/**
-	 * 静态展示表单项类名
-    */
-	public Grid staticClassName(Object value) {
-		return (Grid) this.set("staticClassName", value);
-	}
-	
-	/**
-	    */
-	public Grid staticSchema(Object value) {
-		return (Grid) this.set("staticSchema", value);
-	}
-	
-	/**
-	 * 容器 css 类名
-    */
-	public Grid className(Object value) {
-		return (Grid) this.set("className", value);
-	}
-	
-	/**
-	 * 静态展示表单项Label类名
-    */
-	public Grid staticLabelClassName(Object value) {
-		return (Grid) this.set("staticLabelClassName", value);
-	}
-	
-	/**
-	 * 组件样式
-    */
-	public Grid style(Object value) {
-		return (Grid) this.set("style", value);
-	}
-	
-	/**
-	 * 指定为 Grid 格子布局渲染器。
-    */
-	public Grid type(Object value) {
-		return (Grid) this.set("type", value);
 	}
 	
 	/**
@@ -159,10 +70,59 @@ public class Grid extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否显示表达式
+	 * 静态展示表单项Value类名
     */
-	public Grid visibleOn(Object value) {
-		return (Grid) this.set("visibleOn", value);
+	public Grid staticInputClassName(Object value) {
+		return (Grid) this.set("staticInputClassName", value);
+	}
+	
+	/**
+	 * 指定为 Grid 格子布局渲染器。
+    */
+	public Grid type(Object value) {
+		return (Grid) this.set("type", value);
+	}
+	
+	/**
+	 * 是否显示
+    */
+	public Grid visible(Object value) {
+		return (Grid) this.set("visible", value);
+	}
+	
+	/**
+	 * 事件动作配置
+    */
+	public Grid onEvent(Object value) {
+		return (Grid) this.set("onEvent", value);
+	}
+	
+	/**
+	 * 静态展示表单项类名
+    */
+	public Grid staticClassName(Object value) {
+		return (Grid) this.set("staticClassName", value);
+	}
+	
+	/**
+	 * 组件样式
+    */
+	public Grid style(Object value) {
+		return (Grid) this.set("style", value);
+	}
+	
+	/**
+	 * 是否隐藏
+    */
+	public Grid hidden(Object value) {
+		return (Grid) this.set("hidden", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于日志采集
+    */
+	public Grid id(Object value) {
+		return (Grid) this.set("id", value);
 	}
 	
 	/**
@@ -173,6 +133,53 @@ public class Grid extends BaseRenderer {
 	}
 	
 	/**
+	 * 是否禁用
+    */
+	public Grid disabled(Object value) {
+		return (Grid) this.set("disabled", value);
+	}
+	
+	/**
+	 * 是否禁用表达式
+    */
+	public Grid disabledOn(Object value) {
+		return (Grid) this.set("disabledOn", value);
+	}
+	
+	/**
+	 * 编辑器配置，运行时可以忽略
+    */
+	public Grid editorSetting(Object value) {
+		return (Grid) this.set("editorSetting", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public Grid staticLabelClassName(Object value) {
+		return (Grid) this.set("staticLabelClassName", value);
+	}
+	
+	/**
+	    */
+	public Grid testIdBuilder(Object value) {
+		return (Grid) this.set("testIdBuilder", value);
+	}
+	
+	/**
+	    */
+	public Grid testid(Object value) {
+		return (Grid) this.set("testid", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
+    */
+	public Grid $$id(Object value) {
+		return (Grid) this.set("$$id", value);
+	}
+	
+	/**
 	 * 静态展示空值占位
     */
 	public Grid staticPlaceholder(Object value) {
@@ -180,9 +187,16 @@ public class Grid extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项Value类名
+	    */
+	public Grid staticSchema(Object value) {
+		return (Grid) this.set("staticSchema", value);
+	}
+	
+	/**
+	 * 垂直对齐方式
+    * 可选值: top | middle | bottom | between
     */
-	public Grid staticInputClassName(Object value) {
-		return (Grid) this.set("staticInputClassName", value);
+	public Grid valign(Object value) {
+		return (Grid) this.set("valign", value);
 	}
 	}

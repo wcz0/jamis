@@ -10,18 +10,6 @@ public class ImageToolbarAction extends BaseRenderer {
 		this.set("type", "imageToolbarAction");
 	}
 
-	public ImageToolbarAction set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
-	/**
-	    * 可选值: ROTATE_RIGHT | ROTATE_LEFT | ZOOM_IN | ZOOM_OUT | SCALE_ORIGIN
-    */
-	public ImageToolbarAction key(Object value) {
-		return (ImageToolbarAction) this.set("key", value);
-	}
-	
 	/**
 	    */
 	public ImageToolbarAction label(Object value) {
@@ -44,5 +32,12 @@ public class ImageToolbarAction extends BaseRenderer {
 	    */
 	public ImageToolbarAction disabled(Object value) {
 		return (ImageToolbarAction) this.set("disabled", value);
+	}
+	
+	/**
+	    * 可选值: ROTATE_RIGHT | ROTATE_LEFT | ZOOM_IN | ZOOM_OUT | SCALE_ORIGIN
+    */
+	public ImageToolbarAction key(Object value) {
+		return (ImageToolbarAction) this.set("key", value);
 	}
 	}

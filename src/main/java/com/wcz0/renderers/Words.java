@@ -11,22 +11,25 @@ public class Words extends BaseRenderer {
 		this.set("type", "words");
 	}
 
-	public Words set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 组件唯一 id，主要用于日志采集
+	 * 静态展示空值占位
     */
-	public Words id(Object value) {
-		return (Words) this.set("id", value);
+	public Words staticPlaceholder(Object value) {
+		return (Words) this.set("staticPlaceholder", value);
 	}
 	
 	/**
-	    */
-	public Words staticSchema(Object value) {
-		return (Words) this.set("staticSchema", value);
+	 * 静态展示表单项类名
+    */
+	public Words staticClassName(Object value) {
+		return (Words) this.set("staticClassName", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public Words staticLabelClassName(Object value) {
+		return (Words) this.set("staticLabelClassName", value);
 	}
 	
 	/**
@@ -37,10 +40,23 @@ public class Words extends BaseRenderer {
 	}
 	
 	/**
-	 * 展示文字
+	 * 是否隐藏表达式
     */
-	public Words collapseButton(Object value) {
-		return (Words) this.set("collapseButton", value);
+	public Words hiddenOn(Object value) {
+		return (Words) this.set("hiddenOn", value);
+	}
+	
+	/**
+	 * 编辑器配置，运行时可以忽略
+    */
+	public Words editorSetting(Object value) {
+		return (Words) this.set("editorSetting", value);
+	}
+	
+	/**
+	    */
+	public Words testIdBuilder(Object value) {
+		return (Words) this.set("testIdBuilder", value);
 	}
 	
 	/**
@@ -51,17 +67,51 @@ public class Words extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否隐藏表达式
+	 * 分割符
     */
-	public Words hiddenOn(Object value) {
-		return (Words) this.set("hiddenOn", value);
+	public Words delimiter(Object value) {
+		return (Words) this.set("delimiter", value);
 	}
 	
 	/**
-	 * 是否隐藏
+	 * 事件动作配置
     */
-	public Words hidden(Object value) {
-		return (Words) this.set("hidden", value);
+	public Words onEvent(Object value) {
+		return (Words) this.set("onEvent", value);
+	}
+	
+	/**
+	    */
+	public Words staticSchema(Object value) {
+		return (Words) this.set("staticSchema", value);
+	}
+	
+	/**
+	 * 展示限制, 为0时也无限制
+    */
+	public Words limit(Object value) {
+		return (Words) this.set("limit", value);
+	}
+	
+	/**
+	 * 展示文字
+    */
+	public Words collapseButton(Object value) {
+		return (Words) this.set("collapseButton", value);
+	}
+	
+	/**
+	 * 容器 css 类名
+    */
+	public Words className(Object value) {
+		return (Words) this.set("className", value);
+	}
+	
+	/**
+	 * 是否静态展示
+    */
+	public Words static_(Object value) {
+		return (Words) this.set("static_", value);
 	}
 	
 	/**
@@ -79,87 +129,10 @@ public class Words extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否禁用表达式
-    */
-	public Words disabledOn(Object value) {
-		return (Words) this.set("disabledOn", value);
-	}
-	
-	/**
-	 * 静态展示表单项Label类名
-    */
-	public Words staticLabelClassName(Object value) {
-		return (Words) this.set("staticLabelClassName", value);
-	}
-	
-	/**
-	 * 分割符
-    */
-	public Words delimiter(Object value) {
-		return (Words) this.set("delimiter", value);
-	}
-	
-	/**
-	 * 容器 css 类名
-    */
-	public Words className(Object value) {
-		return (Words) this.set("className", value);
-	}
-	
-	/**
-	 * 是否显示
-    */
-	public Words visible(Object value) {
-		return (Words) this.set("visible", value);
-	}
-	
-	/**
-	 * 事件动作配置
-    */
-	public Words onEvent(Object value) {
-		return (Words) this.set("onEvent", value);
-	}
-	
-	/**
 	 * 展示文字
     */
 	public Words expendButtonText(Object value) {
 		return (Words) this.set("expendButtonText", value);
-	}
-	
-	/**
-	 * 收起文字
-    */
-	public Words collapseButtonText(Object value) {
-		return (Words) this.set("collapseButtonText", value);
-	}
-	
-	/**
-	 * 是否静态展示
-    */
-	public Words static_(Object value) {
-		return (Words) this.set("static_", value);
-	}
-	
-	/**
-	 * 是否静态展示表达式
-    */
-	public Words staticOn(Object value) {
-		return (Words) this.set("staticOn", value);
-	}
-	
-	/**
-	 * 编辑器配置，运行时可以忽略
-    */
-	public Words editorSetting(Object value) {
-		return (Words) this.set("editorSetting", value);
-	}
-	
-	/**
-	 * 是否显示表达式
-    */
-	public Words visibleOn(Object value) {
-		return (Words) this.set("visibleOn", value);
 	}
 	
 	/**
@@ -170,10 +143,71 @@ public class Words extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项类名
+	 * 是否隐藏
     */
-	public Words staticClassName(Object value) {
-		return (Words) this.set("staticClassName", value);
+	public Words hidden(Object value) {
+		return (Words) this.set("hidden", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于日志采集
+    */
+	public Words id(Object value) {
+		return (Words) this.set("id", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
+    */
+	public Words $$id(Object value) {
+		return (Words) this.set("$$id", value);
+	}
+	
+	/**
+	 * 是否禁用
+    */
+	public Words disabled(Object value) {
+		return (Words) this.set("disabled", value);
+	}
+	
+	/**
+	 * 是否显示
+    */
+	public Words visible(Object value) {
+		return (Words) this.set("visible", value);
+	}
+	
+	/**
+	 * 是否显示表达式
+    */
+	public Words visibleOn(Object value) {
+		return (Words) this.set("visibleOn", value);
+	}
+	
+	/**
+	 * 是否静态展示表达式
+    */
+	public Words staticOn(Object value) {
+		return (Words) this.set("staticOn", value);
+	}
+	
+	/**
+	 * 是否禁用表达式
+    */
+	public Words disabledOn(Object value) {
+		return (Words) this.set("disabledOn", value);
+	}
+	
+	/**
+	    */
+	public Words type(Object value) {
+		return (Words) this.set("type", value);
+	}
+	
+	/**
+	    */
+	public Words testid(Object value) {
+		return (Words) this.set("testid", value);
 	}
 	
 	/**
@@ -184,29 +218,9 @@ public class Words extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示空值占位
+	 * 收起文字
     */
-	public Words staticPlaceholder(Object value) {
-		return (Words) this.set("staticPlaceholder", value);
-	}
-	
-	/**
-	    */
-	public Words type(Object value) {
-		return (Words) this.set("type", value);
-	}
-	
-	/**
-	 * 展示限制, 为0时也无限制
-    */
-	public Words limit(Object value) {
-		return (Words) this.set("limit", value);
-	}
-	
-	/**
-	 * 是否禁用
-    */
-	public Words disabled(Object value) {
-		return (Words) this.set("disabled", value);
+	public Words collapseButtonText(Object value) {
+		return (Words) this.set("collapseButtonText", value);
 	}
 	}

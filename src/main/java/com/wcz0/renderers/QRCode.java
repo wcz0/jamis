@@ -11,30 +11,24 @@ public class QRCode extends BaseRenderer {
 		this.set("type", "qRCode");
 	}
 
-	public QRCode set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 事件动作配置
+	 * 是否隐藏表达式
     */
-	public QRCode onEvent(Object value) {
-		return (QRCode) this.set("onEvent", value);
+	public QRCode hiddenOn(Object value) {
+		return (QRCode) this.set("hiddenOn", value);
 	}
 	
 	/**
-	 * 关联字段名。
+	 * 组件唯一 id，主要用于日志采集
     */
-	public QRCode name(Object value) {
-		return (QRCode) this.set("name", value);
+	public QRCode id(Object value) {
+		return (QRCode) this.set("id", value);
 	}
 	
 	/**
-	 * 是否显示表达式
-    */
-	public QRCode visibleOn(Object value) {
-		return (QRCode) this.set("visibleOn", value);
+	    */
+	public QRCode staticSchema(Object value) {
+		return (QRCode) this.set("staticSchema", value);
 	}
 	
 	/**
@@ -45,44 +39,23 @@ public class QRCode extends BaseRenderer {
 	}
 	
 	/**
+	 * 组件样式
+    */
+	public QRCode style(Object value) {
+		return (QRCode) this.set("style", value);
+	}
+	
+	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public QRCode useMobileUI(Object value) {
+		return (QRCode) this.set("useMobileUI", value);
+	}
+	
+	/**
 	    */
-	public QRCode staticSchema(Object value) {
-		return (QRCode) this.set("staticSchema", value);
-	}
-	
-	/**
-	    * 可选值: qrcode | qr-code
-    */
-	public QRCode type(Object value) {
-		return (QRCode) this.set("type", value);
-	}
-	
-	/**
-	 * 前景色
-    */
-	public QRCode foregroundColor(Object value) {
-		return (QRCode) this.set("foregroundColor", value);
-	}
-	
-	/**
-	 * 是否禁用
-    */
-	public QRCode disabled(Object value) {
-		return (QRCode) this.set("disabled", value);
-	}
-	
-	/**
-	 * 是否静态展示
-    */
-	public QRCode static_(Object value) {
-		return (QRCode) this.set("static_", value);
-	}
-	
-	/**
-	 * 静态展示表单项Label类名
-    */
-	public QRCode staticLabelClassName(Object value) {
-		return (QRCode) this.set("staticLabelClassName", value);
+	public QRCode testid(Object value) {
+		return (QRCode) this.set("testid", value);
 	}
 	
 	/**
@@ -108,10 +81,10 @@ public class QRCode extends BaseRenderer {
 	}
 	
 	/**
-	 * 占位符
+	 * 是否禁用表达式
     */
-	public QRCode placeholder(Object value) {
-		return (QRCode) this.set("placeholder", value);
+	public QRCode disabledOn(Object value) {
+		return (QRCode) this.set("disabledOn", value);
 	}
 	
 	/**
@@ -122,6 +95,13 @@ public class QRCode extends BaseRenderer {
 	}
 	
 	/**
+	 * 是否隐藏
+    */
+	public QRCode hidden(Object value) {
+		return (QRCode) this.set("hidden", value);
+	}
+	
+	/**
 	 * 是否显示
     */
 	public QRCode visible(Object value) {
@@ -129,52 +109,24 @@ public class QRCode extends BaseRenderer {
 	}
 	
 	/**
-	 * 可以组件级别用来关闭移动端样式
+	 * 是否显示表达式
     */
-	public QRCode useMobileUI(Object value) {
-		return (QRCode) this.set("useMobileUI", value);
+	public QRCode visibleOn(Object value) {
+		return (QRCode) this.set("visibleOn", value);
 	}
 	
 	/**
-	 * 图片配置
+	 * 事件动作配置
     */
-	public QRCode imageSettings(Object value) {
-		return (QRCode) this.set("imageSettings", value);
+	public QRCode onEvent(Object value) {
+		return (QRCode) this.set("onEvent", value);
 	}
 	
 	/**
-	 * 是否隐藏表达式
+	 * 是否静态展示
     */
-	public QRCode hiddenOn(Object value) {
-		return (QRCode) this.set("hiddenOn", value);
-	}
-	
-	/**
-	 * 静态展示空值占位
-    */
-	public QRCode staticPlaceholder(Object value) {
-		return (QRCode) this.set("staticPlaceholder", value);
-	}
-	
-	/**
-	 * 组件唯一 id，主要用于日志采集
-    */
-	public QRCode id(Object value) {
-		return (QRCode) this.set("id", value);
-	}
-	
-	/**
-	 * css 类名
-    */
-	public QRCode qrcodeClassName(Object value) {
-		return (QRCode) this.set("qrcodeClassName", value);
-	}
-	
-	/**
-	 * 是否禁用表达式
-    */
-	public QRCode disabledOn(Object value) {
-		return (QRCode) this.set("disabledOn", value);
+	public QRCode static_(Object value) {
+		return (QRCode) this.set("static_", value);
 	}
 	
 	/**
@@ -185,10 +137,38 @@ public class QRCode extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否静态展示表达式
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
     */
-	public QRCode staticOn(Object value) {
-		return (QRCode) this.set("staticOn", value);
+	public QRCode $$id(Object value) {
+		return (QRCode) this.set("$$id", value);
+	}
+	
+	/**
+	 * 图片配置
+    */
+	public QRCode imageSettings(Object value) {
+		return (QRCode) this.set("imageSettings", value);
+	}
+	
+	/**
+	 * 前景色
+    */
+	public QRCode foregroundColor(Object value) {
+		return (QRCode) this.set("foregroundColor", value);
+	}
+	
+	/**
+	 * css 类名
+    */
+	public QRCode qrcodeClassName(Object value) {
+		return (QRCode) this.set("qrcodeClassName", value);
+	}
+	
+	/**
+	 * 静态展示空值占位
+    */
+	public QRCode staticPlaceholder(Object value) {
+		return (QRCode) this.set("staticPlaceholder", value);
 	}
 	
 	/**
@@ -199,16 +179,50 @@ public class QRCode extends BaseRenderer {
 	}
 	
 	/**
-	 * 组件样式
+	 * 关联字段名。
     */
-	public QRCode style(Object value) {
-		return (QRCode) this.set("style", value);
+	public QRCode name(Object value) {
+		return (QRCode) this.set("name", value);
 	}
 	
 	/**
-	 * 是否隐藏
+	 * 是否静态展示表达式
     */
-	public QRCode hidden(Object value) {
-		return (QRCode) this.set("hidden", value);
+	public QRCode staticOn(Object value) {
+		return (QRCode) this.set("staticOn", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public QRCode staticLabelClassName(Object value) {
+		return (QRCode) this.set("staticLabelClassName", value);
+	}
+	
+	/**
+	 * 是否禁用
+    */
+	public QRCode disabled(Object value) {
+		return (QRCode) this.set("disabled", value);
+	}
+	
+	/**
+	    * 可选值: qrcode | qr-code
+    */
+	public QRCode type(Object value) {
+		return (QRCode) this.set("type", value);
+	}
+	
+	/**
+	 * 占位符
+    */
+	public QRCode placeholder(Object value) {
+		return (QRCode) this.set("placeholder", value);
+	}
+	
+	/**
+	    */
+	public QRCode testIdBuilder(Object value) {
+		return (QRCode) this.set("testIdBuilder", value);
 	}
 	}

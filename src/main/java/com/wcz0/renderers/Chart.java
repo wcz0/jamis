@@ -1,6 +1,6 @@
 package com.wcz0.renderers;
 /**
- * Chart 图表渲染器。 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/carousel
+ * Chart 图表渲染器。 文档：https://aisuda.bce.baidu.com/amis/zh-CN/components/chart
 
  * @author wcz0
  * @version 6.2.2
@@ -11,16 +11,222 @@ public class Chart extends BaseRenderer {
 		this.set("type", "chart");
 	}
 
-	public Chart set(String key, Object value) {
-		super.set(key, value);
-		return this;
+	/**
+	 * 是否禁用
+    */
+	public Chart disabled(Object value) {
+		return (Chart) this.set("disabled", value);
 	}
-
+	
+	/**
+	 * 静态展示空值占位
+    */
+	public Chart staticPlaceholder(Object value) {
+		return (Chart) this.set("staticPlaceholder", value);
+	}
+	
+	/**
+	    */
+	public Chart staticSchema(Object value) {
+		return (Chart) this.set("staticSchema", value);
+	}
+	
+	/**
+	 * 是否初始加载用表达式来配置
+    */
+	public Chart initFetchOn(Object value) {
+		return (Chart) this.set("initFetchOn", value);
+	}
+	
+	/**
+	 * Chart 主题配置
+    */
+	public Chart chartTheme(Object value) {
+		return (Chart) this.set("chartTheme", value);
+	}
+	
+	/**
+	    */
+	public Chart source(Object value) {
+		return (Chart) this.set("source", value);
+	}
+	
 	/**
 	 * 高度设置
     */
 	public Chart height(Object value) {
 		return (Chart) this.set("height", value);
+	}
+	
+	/**
+	    */
+	public Chart dataFilter(Object value) {
+		return (Chart) this.set("dataFilter", value);
+	}
+	
+	/**
+	 * 点击行为配置，可以用来满足下钻操作等。
+    */
+	public Chart clickAction(Object value) {
+		return (Chart) this.set("clickAction", value);
+	}
+	
+	/**
+	 * 是否静态展示表达式
+    */
+	public Chart staticOn(Object value) {
+		return (Chart) this.set("staticOn", value);
+	}
+	
+	/**
+	 * 编辑器配置，运行时可以忽略
+    */
+	public Chart editorSetting(Object value) {
+		return (Chart) this.set("editorSetting", value);
+	}
+	
+	/**
+	 * 配置echart的config，支持数据映射。如果用了数据映射，为了同步更新，请设置 trackExpression
+    */
+	public Chart config(Object value) {
+		return (Chart) this.set("config", value);
+	}
+	
+	/**
+	 * 跟踪表达式，如果这个表达式的运行结果发生变化了，则会更新 Echart，当 config 中用了数据映射时有用。
+    */
+	public Chart trackExpression(Object value) {
+		return (Chart) this.set("trackExpression", value);
+	}
+	
+	/**
+	    */
+	public Chart testid(Object value) {
+		return (Chart) this.set("testid", value);
+	}
+	
+	/**
+	 * 图表配置接口
+    */
+	public Chart api(Object value) {
+		return (Chart) this.set("api", value);
+	}
+	
+	/**
+	 * 宽度设置
+    */
+	public Chart width(Object value) {
+		return (Chart) this.set("width", value);
+	}
+	
+	/**
+	 * 是否隐藏表达式
+    */
+	public Chart hiddenOn(Object value) {
+		return (Chart) this.set("hiddenOn", value);
+	}
+	
+	/**
+	 * 是否显示
+    */
+	public Chart visible(Object value) {
+		return (Chart) this.set("visible", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于日志采集
+    */
+	public Chart id(Object value) {
+		return (Chart) this.set("id", value);
+	}
+	
+	/**
+	 * style样式
+    */
+	public Chart style(Object value) {
+		return (Chart) this.set("style", value);
+	}
+	
+	/**
+	 * 是否静态展示
+    */
+	public Chart static_(Object value) {
+		return (Chart) this.set("static_", value);
+	}
+	
+	/**
+	 * 不可见的时候隐藏
+    */
+	public Chart unMountOnHidden(Object value) {
+		return (Chart) this.set("unMountOnHidden", value);
+	}
+	
+	/**
+	 * 获取 geo json 文件的地址
+    */
+	public Chart mapURL(Object value) {
+		return (Chart) this.set("mapURL", value);
+	}
+	
+	/**
+	    */
+	public Chart testIdBuilder(Object value) {
+		return (Chart) this.set("testIdBuilder", value);
+	}
+	
+	/**
+	 * 是否初始加载。
+    */
+	public Chart initFetch(Object value) {
+		return (Chart) this.set("initFetch", value);
+	}
+	
+	/**
+	 * 默认配置时追加的，如果更新配置想完全替换配置请配置为 true.
+    */
+	public Chart replaceChartOption(Object value) {
+		return (Chart) this.set("replaceChartOption", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
+    */
+	public Chart $$id(Object value) {
+		return (Chart) this.set("$$id", value);
+	}
+	
+	/**
+	 * 是否显示表达式
+    */
+	public Chart visibleOn(Object value) {
+		return (Chart) this.set("visibleOn", value);
+	}
+	
+	/**
+	 * 事件动作配置
+    */
+	public Chart onEvent(Object value) {
+		return (Chart) this.set("onEvent", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public Chart staticLabelClassName(Object value) {
+		return (Chart) this.set("staticLabelClassName", value);
+	}
+	
+	/**
+	    */
+	public Chart name(Object value) {
+		return (Chart) this.set("name", value);
+	}
+	
+	/**
+	 * 地图名称
+    */
+	public Chart mapName(Object value) {
+		return (Chart) this.set("mapName", value);
 	}
 	
 	/**
@@ -38,189 +244,17 @@ public class Chart extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否初始加载用表达式来配置
+	 * 是否隐藏
     */
-	public Chart initFetchOn(Object value) {
-		return (Chart) this.set("initFetchOn", value);
+	public Chart hidden(Object value) {
+		return (Chart) this.set("hidden", value);
 	}
 	
 	/**
-	 * 宽度设置
+	 * 指定为 chart 类型
     */
-	public Chart width(Object value) {
-		return (Chart) this.set("width", value);
-	}
-	
-	/**
-	 * 事件动作配置
-    */
-	public Chart onEvent(Object value) {
-		return (Chart) this.set("onEvent", value);
-	}
-	
-	/**
-	 * 配置echart的config，支持数据映射。如果用了数据映射，为了同步更新，请设置 trackExpression
-    */
-	public Chart config(Object value) {
-		return (Chart) this.set("config", value);
-	}
-	
-	/**
-	 * 地图名称
-    */
-	public Chart mapName(Object value) {
-		return (Chart) this.set("mapName", value);
-	}
-	
-	/**
-	 * 图表配置接口
-    */
-	public Chart api(Object value) {
-		return (Chart) this.set("api", value);
-	}
-	
-	/**
-	 * 是否静态展示表达式
-    */
-	public Chart staticOn(Object value) {
-		return (Chart) this.set("staticOn", value);
-	}
-	
-	/**
-	 * 静态展示表单项类名
-    */
-	public Chart staticClassName(Object value) {
-		return (Chart) this.set("staticClassName", value);
-	}
-	
-	/**
-	    */
-	public Chart staticSchema(Object value) {
-		return (Chart) this.set("staticSchema", value);
-	}
-	
-	/**
-	 * 获取 geo json 文件的地址
-    */
-	public Chart mapURL(Object value) {
-		return (Chart) this.set("mapURL", value);
-	}
-	
-	/**
-	 * 是否禁用
-    */
-	public Chart disabled(Object value) {
-		return (Chart) this.set("disabled", value);
-	}
-	
-	/**
-	 * 是否隐藏表达式
-    */
-	public Chart hiddenOn(Object value) {
-		return (Chart) this.set("hiddenOn", value);
-	}
-	
-	/**
-	 * 跟踪表达式，如果这个表达式的运行结果发生变化了，则会更新 Echart，当 config 中用了数据映射时有用。
-    */
-	public Chart trackExpression(Object value) {
-		return (Chart) this.set("trackExpression", value);
-	}
-	
-	/**
-	    */
-	public Chart name(Object value) {
-		return (Chart) this.set("name", value);
-	}
-	
-	/**
-	    */
-	public Chart source(Object value) {
-		return (Chart) this.set("source", value);
-	}
-	
-	/**
-	 * 不可见的时候隐藏
-    */
-	public Chart unMountOnHidden(Object value) {
-		return (Chart) this.set("unMountOnHidden", value);
-	}
-	
-	/**
-	 * 是否显示
-    */
-	public Chart visible(Object value) {
-		return (Chart) this.set("visible", value);
-	}
-	
-	/**
-	 * style样式
-    */
-	public Chart style(Object value) {
-		return (Chart) this.set("style", value);
-	}
-	
-	/**
-	 * 静态展示表单项Value类名
-    */
-	public Chart staticInputClassName(Object value) {
-		return (Chart) this.set("staticInputClassName", value);
-	}
-	
-	/**
-	 * 可以组件级别用来关闭移动端样式
-    */
-	public Chart useMobileUI(Object value) {
-		return (Chart) this.set("useMobileUI", value);
-	}
-	
-	/**
-	 * Chart 主题配置
-    */
-	public Chart chartTheme(Object value) {
-		return (Chart) this.set("chartTheme", value);
-	}
-	
-	/**
-	 * 点击行为配置，可以用来满足下钻操作等。
-    */
-	public Chart clickAction(Object value) {
-		return (Chart) this.set("clickAction", value);
-	}
-	
-	/**
-	 * 默认配置时追加的，如果更新配置想完全替换配置请配置为 true.
-    */
-	public Chart replaceChartOption(Object value) {
-		return (Chart) this.set("replaceChartOption", value);
-	}
-	
-	/**
-	 * 是否显示表达式
-    */
-	public Chart visibleOn(Object value) {
-		return (Chart) this.set("visibleOn", value);
-	}
-	
-	/**
-	 * 是否静态展示
-    */
-	public Chart static_(Object value) {
-		return (Chart) this.set("static_", value);
-	}
-	
-	/**
-	 * 编辑器配置，运行时可以忽略
-    */
-	public Chart editorSetting(Object value) {
-		return (Chart) this.set("editorSetting", value);
-	}
-	
-	/**
-	 * 是否初始加载。
-    */
-	public Chart initFetch(Object value) {
-		return (Chart) this.set("initFetch", value);
+	public Chart type(Object value) {
+		return (Chart) this.set("type", value);
 	}
 	
 	/**
@@ -228,6 +262,13 @@ public class Chart extends BaseRenderer {
     */
 	public Chart interval(Object value) {
 		return (Chart) this.set("interval", value);
+	}
+	
+	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public Chart useMobileUI(Object value) {
+		return (Chart) this.set("useMobileUI", value);
 	}
 	
 	/**
@@ -245,43 +286,16 @@ public class Chart extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项Label类名
+	 * 静态展示表单项类名
     */
-	public Chart staticLabelClassName(Object value) {
-		return (Chart) this.set("staticLabelClassName", value);
+	public Chart staticClassName(Object value) {
+		return (Chart) this.set("staticClassName", value);
 	}
 	
 	/**
-	 * 静态展示空值占位
+	 * 静态展示表单项Value类名
     */
-	public Chart staticPlaceholder(Object value) {
-		return (Chart) this.set("staticPlaceholder", value);
-	}
-	
-	/**
-	 * 指定为 chart 类型
-    */
-	public Chart type(Object value) {
-		return (Chart) this.set("type", value);
-	}
-	
-	/**
-	    */
-	public Chart dataFilter(Object value) {
-		return (Chart) this.set("dataFilter", value);
-	}
-	
-	/**
-	 * 是否隐藏
-    */
-	public Chart hidden(Object value) {
-		return (Chart) this.set("hidden", value);
-	}
-	
-	/**
-	 * 组件唯一 id，主要用于日志采集
-    */
-	public Chart id(Object value) {
-		return (Chart) this.set("id", value);
+	public Chart staticInputClassName(Object value) {
+		return (Chart) this.set("staticInputClassName", value);
 	}
 	}

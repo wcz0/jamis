@@ -11,64 +11,11 @@ public class DateRange extends BaseRenderer {
 		this.set("type", "dateRange");
 	}
 
-	public DateRange set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 容器 css 类名
+	 * 值的时间格式，参考 moment 中的格式说明。
     */
-	public DateRange className(Object value) {
-		return (DateRange) this.set("className", value);
-	}
-	
-	/**
-	 * 是否隐藏
-    */
-	public DateRange hidden(Object value) {
-		return (DateRange) this.set("hidden", value);
-	}
-	
-	/**
-	 * 是否静态展示
-    */
-	public DateRange static_(Object value) {
-		return (DateRange) this.set("static_", value);
-	}
-	
-	/**
-	    */
-	public DateRange staticSchema(Object value) {
-		return (DateRange) this.set("staticSchema", value);
-	}
-	
-	/**
-	 * 展示的时间格式，参考 moment 中的格式说明。
-    */
-	public DateRange format(Object value) {
-		return (DateRange) this.set("format", value);
-	}
-	
-	/**
-	 * 展示的时间格式，参考 moment 中的格式说明。（新：同format）
-    */
-	public DateRange displayFormat(Object value) {
-		return (DateRange) this.set("displayFormat", value);
-	}
-	
-	/**
-	 * 组件样式
-    */
-	public DateRange style(Object value) {
-		return (DateRange) this.set("style", value);
-	}
-	
-	/**
-	 * 编辑器配置，运行时可以忽略
-    */
-	public DateRange editorSetting(Object value) {
-		return (DateRange) this.set("editorSetting", value);
+	public DateRange valueFormat(Object value) {
+		return (DateRange) this.set("valueFormat", value);
 	}
 	
 	/**
@@ -79,24 +26,10 @@ public class DateRange extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否显示表达式
+	 * 是否隐藏表达式
     */
-	public DateRange visibleOn(Object value) {
-		return (DateRange) this.set("visibleOn", value);
-	}
-	
-	/**
-	 * 组件唯一 id，主要用于日志采集
-    */
-	public DateRange id(Object value) {
-		return (DateRange) this.set("id", value);
-	}
-	
-	/**
-	 * 事件动作配置
-    */
-	public DateRange onEvent(Object value) {
-		return (DateRange) this.set("onEvent", value);
+	public DateRange hiddenOn(Object value) {
+		return (DateRange) this.set("hiddenOn", value);
 	}
 	
 	/**
@@ -114,38 +47,10 @@ public class DateRange extends BaseRenderer {
 	}
 	
 	/**
-	 * 可以组件级别用来关闭移动端样式
+	 * 展示的时间格式，参考 moment 中的格式说明。（新：同format）
     */
-	public DateRange useMobileUI(Object value) {
-		return (DateRange) this.set("useMobileUI", value);
-	}
-	
-	/**
-	 * 值的时间格式，参考 moment 中的格式说明。
-    */
-	public DateRange valueFormat(Object value) {
-		return (DateRange) this.set("valueFormat", value);
-	}
-	
-	/**
-	 * 是否隐藏表达式
-    */
-	public DateRange hiddenOn(Object value) {
-		return (DateRange) this.set("hiddenOn", value);
-	}
-	
-	/**
-	 * 是否静态展示表达式
-    */
-	public DateRange staticOn(Object value) {
-		return (DateRange) this.set("staticOn", value);
-	}
-	
-	/**
-	 * 分割符
-    */
-	public DateRange delimiter(Object value) {
-		return (DateRange) this.set("delimiter", value);
+	public DateRange displayFormat(Object value) {
+		return (DateRange) this.set("displayFormat", value);
 	}
 	
 	/**
@@ -156,10 +61,30 @@ public class DateRange extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否显示
+	 * 组件唯一 id，主要用于日志采集
     */
-	public DateRange visible(Object value) {
-		return (DateRange) this.set("visible", value);
+	public DateRange id(Object value) {
+		return (DateRange) this.set("id", value);
+	}
+	
+	/**
+	    */
+	public DateRange testid(Object value) {
+		return (DateRange) this.set("testid", value);
+	}
+	
+	/**
+	 * 是否显示表达式
+    */
+	public DateRange visibleOn(Object value) {
+		return (DateRange) this.set("visibleOn", value);
+	}
+	
+	/**
+	 * 是否静态展示表达式
+    */
+	public DateRange staticOn(Object value) {
+		return (DateRange) this.set("staticOn", value);
 	}
 	
 	/**
@@ -170,17 +95,30 @@ public class DateRange extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项Value类名
+	 * 编辑器配置，运行时可以忽略
     */
-	public DateRange staticInputClassName(Object value) {
-		return (DateRange) this.set("staticInputClassName", value);
+	public DateRange editorSetting(Object value) {
+		return (DateRange) this.set("editorSetting", value);
 	}
 	
 	/**
-	 * 指定为日期展示类型
+	 * 可以组件级别用来关闭移动端样式
     */
-	public DateRange type(Object value) {
-		return (DateRange) this.set("type", value);
+	public DateRange useMobileUI(Object value) {
+		return (DateRange) this.set("useMobileUI", value);
+	}
+	
+	/**
+	    */
+	public DateRange testIdBuilder(Object value) {
+		return (DateRange) this.set("testIdBuilder", value);
+	}
+	
+	/**
+	 * 事件动作配置
+    */
+	public DateRange onEvent(Object value) {
+		return (DateRange) this.set("onEvent", value);
 	}
 	
 	/**
@@ -188,5 +126,81 @@ public class DateRange extends BaseRenderer {
     */
 	public DateRange connector(Object value) {
 		return (DateRange) this.set("connector", value);
+	}
+	
+	/**
+	 * 容器 css 类名
+    */
+	public DateRange className(Object value) {
+		return (DateRange) this.set("className", value);
+	}
+	
+	/**
+	 * 是否隐藏
+    */
+	public DateRange hidden(Object value) {
+		return (DateRange) this.set("hidden", value);
+	}
+	
+	/**
+	 * 静态展示表单项Value类名
+    */
+	public DateRange staticInputClassName(Object value) {
+		return (DateRange) this.set("staticInputClassName", value);
+	}
+	
+	/**
+	    */
+	public DateRange staticSchema(Object value) {
+		return (DateRange) this.set("staticSchema", value);
+	}
+	
+	/**
+	 * 组件样式
+    */
+	public DateRange style(Object value) {
+		return (DateRange) this.set("style", value);
+	}
+	
+	/**
+	 * 展示的时间格式，参考 moment 中的格式说明。
+    */
+	public DateRange format(Object value) {
+		return (DateRange) this.set("format", value);
+	}
+	
+	/**
+	 * 分割符
+    */
+	public DateRange delimiter(Object value) {
+		return (DateRange) this.set("delimiter", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
+    */
+	public DateRange $$id(Object value) {
+		return (DateRange) this.set("$$id", value);
+	}
+	
+	/**
+	 * 是否显示
+    */
+	public DateRange visible(Object value) {
+		return (DateRange) this.set("visible", value);
+	}
+	
+	/**
+	 * 是否静态展示
+    */
+	public DateRange static_(Object value) {
+		return (DateRange) this.set("static_", value);
+	}
+	
+	/**
+	 * 指定为日期展示类型
+    */
+	public DateRange type(Object value) {
+		return (DateRange) this.set("type", value);
 	}
 	}

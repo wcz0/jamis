@@ -10,11 +10,6 @@ public class QRCodeImageSettings extends BaseRenderer {
 		this.set("type", "qRCodeImageSettings");
 	}
 
-	public QRCodeImageSettings set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
 	    */
 	public QRCodeImageSettings height(Object value) {

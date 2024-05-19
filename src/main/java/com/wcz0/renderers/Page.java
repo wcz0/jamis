@@ -11,77 +11,45 @@ public class Page extends BaseRenderer {
 		this.set("type", "page");
 	}
 
-	public Page set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 下拉刷新配置
+	 * 是否禁用
     */
-	public Page pullRefresh(Object value) {
-		return (Page) this.set("pullRefresh", value);
+	public Page disabled(Object value) {
+		return (Page) this.set("disabled", value);
 	}
 	
 	/**
-	 * 是否显示
+	 * 边栏区域
     */
-	public Page visible(Object value) {
-		return (Page) this.set("visible", value);
+	public Page aside(Object value) {
+		return (Page) this.set("aside", value);
 	}
 	
 	/**
-	 * 是否显示表达式
+	 * 自定义页面级别样式表
     */
-	public Page visibleOn(Object value) {
-		return (Page) this.set("visibleOn", value);
+	public Page css(Object value) {
+		return (Page) this.set("css", value);
 	}
 	
 	/**
-	 * 是否静态展示
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
     */
-	public Page static_(Object value) {
-		return (Page) this.set("static_", value);
+	public Page $$id(Object value) {
+		return (Page) this.set("$$id", value);
 	}
 	
 	/**
 	    */
-	public Page messages(Object value) {
-		return (Page) this.set("messages", value);
+	public Page definitions(Object value) {
+		return (Page) this.set("definitions", value);
 	}
 	
 	/**
-	 * 页面顶部区域，当存在 title 时在右上角显示。
+	 * 是否显示错误信息，默认是显示的。
     */
-	public Page toolbar(Object value) {
-		return (Page) this.set("toolbar", value);
-	}
-	
-	/**
-	 * css 变量
-    */
-	public Page cssVars(Object value) {
-		return (Page) this.set("cssVars", value);
-	}
-	
-	/**
-	 * 配置 header 容器 className
-    */
-	public Page headerClassName(Object value) {
-		return (Page) this.set("headerClassName", value);
-	}
-	
-	/**
-	    */
-	public Page loadingConfig(Object value) {
-		return (Page) this.set("loadingConfig", value);
-	}
-	
-	/**
-	 * 组件唯一 id，主要用于日志采集
-    */
-	public Page id(Object value) {
-		return (Page) this.set("id", value);
+	public Page showErrorMsg(Object value) {
+		return (Page) this.set("showErrorMsg", value);
 	}
 	
 	/**
@@ -99,6 +67,61 @@ public class Page extends BaseRenderer {
 	}
 	
 	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public Page useMobileUI(Object value) {
+		return (Page) this.set("useMobileUI", value);
+	}
+	
+	/**
+	    */
+	public Page testIdBuilder(Object value) {
+		return (Page) this.set("testIdBuilder", value);
+	}
+	
+	/**
+	 * 配置 header 容器 className
+    */
+	public Page headerClassName(Object value) {
+		return (Page) this.set("headerClassName", value);
+	}
+	
+	/**
+	 * 页面顶部区域，当存在 title 时在右上角显示。
+    */
+	public Page toolbar(Object value) {
+		return (Page) this.set("toolbar", value);
+	}
+	
+	/**
+	 * 下拉刷新配置
+    */
+	public Page pullRefresh(Object value) {
+		return (Page) this.set("pullRefresh", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于日志采集
+    */
+	public Page id(Object value) {
+		return (Page) this.set("id", value);
+	}
+	
+	/**
+	 * 边栏最小宽度
+    */
+	public Page asideMinWidth(Object value) {
+		return (Page) this.set("asideMinWidth", value);
+	}
+	
+	/**
+	 * 默认不设置自动感觉内容来决定要不要展示这些区域 如果配置了，以配置为主。
+    */
+	public Page regions(Object value) {
+		return (Page) this.set("regions", value);
+	}
+	
+	/**
 	 * 内容区域
     */
 	public Page body(Object value) {
@@ -106,24 +129,72 @@ public class Page extends BaseRenderer {
 	}
 	
 	/**
-	 * 边栏最小宽度
+	 * 是否隐藏表达式
     */
-	public Page asideMaxWidth(Object value) {
-		return (Page) this.set("asideMaxWidth", value);
+	public Page hiddenOn(Object value) {
+		return (Page) this.set("hiddenOn", value);
 	}
 	
 	/**
-	 * 是否默认就拉取？
-    */
-	public Page initFetch(Object value) {
-		return (Page) this.set("initFetch", value);
+	    */
+	public Page testid(Object value) {
+		return (Page) this.set("testid", value);
 	}
 	
 	/**
-	 * 配置轮询间隔，配置后 initApi 将轮询加载。
+	 * 边栏区 css 类名
     */
-	public Page interval(Object value) {
-		return (Page) this.set("interval", value);
+	public Page asideClassName(Object value) {
+		return (Page) this.set("asideClassName", value);
+	}
+	
+	/**
+	 * 是否禁用表达式
+    */
+	public Page disabledOn(Object value) {
+		return (Page) this.set("disabledOn", value);
+	}
+	
+	/**
+	 * 配置 toolbar 容器 className
+    */
+	public Page toolbarClassName(Object value) {
+		return (Page) this.set("toolbarClassName", value);
+	}
+	
+	/**
+	 * 是否静态展示
+    */
+	public Page static_(Object value) {
+		return (Page) this.set("static_", value);
+	}
+	
+	/**
+	 * 页面初始化的时候，可以设置一个 API 让其取拉取，发送数据会携带当前 data 数据（包含地址栏参数），获取得数据会合并到 data 中，供组件内使用。
+    */
+	public Page initApi(Object value) {
+		return (Page) this.set("initApi", value);
+	}
+	
+	/**
+	 * 静态展示表单项Label类名
+    */
+	public Page staticLabelClassName(Object value) {
+		return (Page) this.set("staticLabelClassName", value);
+	}
+	
+	/**
+	 * 是否显示
+    */
+	public Page visible(Object value) {
+		return (Page) this.set("visible", value);
+	}
+	
+	/**
+	 * 事件动作配置
+    */
+	public Page onEvent(Object value) {
+		return (Page) this.set("onEvent", value);
 	}
 	
 	/**
@@ -134,51 +205,10 @@ public class Page extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项类名
+	 * 静态展示空值占位
     */
-	public Page staticClassName(Object value) {
-		return (Page) this.set("staticClassName", value);
-	}
-	
-	/**
-	    */
-	public Page staticSchema(Object value) {
-		return (Page) this.set("staticSchema", value);
-	}
-	
-	/**
-	 * 页面描述, 标题旁边会出现个小图标，放上去会显示这个属性配置的内容。
-    */
-	public Page remark(Object value) {
-		return (Page) this.set("remark", value);
-	}
-	
-	/**
-	 * 边栏是否允许拖动
-    */
-	public Page asideResizor(Object value) {
-		return (Page) this.set("asideResizor", value);
-	}
-	
-	/**
-	 * 配置停止轮询的条件。
-    */
-	public Page stopAutoRefreshWhen(Object value) {
-		return (Page) this.set("stopAutoRefreshWhen", value);
-	}
-	
-	/**
-	 * 是否显示错误信息，默认是显示的。
-    */
-	public Page showErrorMsg(Object value) {
-		return (Page) this.set("showErrorMsg", value);
-	}
-	
-	/**
-	 * 静态展示表单项Value类名
-    */
-	public Page staticInputClassName(Object value) {
-		return (Page) this.set("staticInputClassName", value);
+	public Page staticPlaceholder(Object value) {
+		return (Page) this.set("staticPlaceholder", value);
 	}
 	
 	/**
@@ -203,71 +233,35 @@ public class Page extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否默认就拉取表达式
-    */
-	public Page initFetchOn(Object value) {
-		return (Page) this.set("initFetchOn", value);
+	    */
+	public Page messages(Object value) {
+		return (Page) this.set("messages", value);
 	}
 	
 	/**
 	    */
-	public Page name(Object value) {
-		return (Page) this.set("name", value);
+	public Page loadingConfig(Object value) {
+		return (Page) this.set("loadingConfig", value);
 	}
 	
 	/**
-	 * 边栏区 css 类名
+	 * 页面描述, 标题旁边会出现个小图标，放上去会显示这个属性配置的内容。
     */
-	public Page asideClassName(Object value) {
-		return (Page) this.set("asideClassName", value);
-	}
-	
-	/**
-	 * 自定义页面级别样式表
-    */
-	public Page css(Object value) {
-		return (Page) this.set("css", value);
+	public Page remark(Object value) {
+		return (Page) this.set("remark", value);
 	}
 	
 	/**
 	    */
-	public Page definitions(Object value) {
-		return (Page) this.set("definitions", value);
+	public Page staticSchema(Object value) {
+		return (Page) this.set("staticSchema", value);
 	}
 	
 	/**
-	 * 是否禁用
+	 * 静态展示表单项类名
     */
-	public Page disabled(Object value) {
-		return (Page) this.set("disabled", value);
-	}
-	
-	/**
-	 * 是否禁用表达式
-    */
-	public Page disabledOn(Object value) {
-		return (Page) this.set("disabledOn", value);
-	}
-	
-	/**
-	 * 是否隐藏表达式
-    */
-	public Page hiddenOn(Object value) {
-		return (Page) this.set("hiddenOn", value);
-	}
-	
-	/**
-	 * 可以组件级别用来关闭移动端样式
-    */
-	public Page useMobileUI(Object value) {
-		return (Page) this.set("useMobileUI", value);
-	}
-	
-	/**
-	 * 指定为 page 渲染器。
-    */
-	public Page type(Object value) {
-		return (Page) this.set("type", value);
+	public Page staticClassName(Object value) {
+		return (Page) this.set("staticClassName", value);
 	}
 	
 	/**
@@ -278,17 +272,9 @@ public class Page extends BaseRenderer {
 	}
 	
 	/**
-	 * 移动端下的样式表
-    */
-	public Page mobileCSS(Object value) {
-		return (Page) this.set("mobileCSS", value);
-	}
-	
-	/**
-	 * 页面初始化的时候，可以设置一个 API 让其取拉取，发送数据会携带当前 data 数据（包含地址栏参数），获取得数据会合并到 data 中，供组件内使用。
-    */
-	public Page initApi(Object value) {
-		return (Page) this.set("initApi", value);
+	    */
+	public Page name(Object value) {
+		return (Page) this.set("name", value);
 	}
 	
 	/**
@@ -299,31 +285,10 @@ public class Page extends BaseRenderer {
 	}
 	
 	/**
-	 * 事件动作配置
+	 * 指定为 page 渲染器。
     */
-	public Page onEvent(Object value) {
-		return (Page) this.set("onEvent", value);
-	}
-	
-	/**
-	 * 静态展示空值占位
-    */
-	public Page staticPlaceholder(Object value) {
-		return (Page) this.set("staticPlaceholder", value);
-	}
-	
-	/**
-	 * 静态展示表单项Label类名
-    */
-	public Page staticLabelClassName(Object value) {
-		return (Page) this.set("staticLabelClassName", value);
-	}
-	
-	/**
-	 * 页面副标题
-    */
-	public Page subTitle(Object value) {
-		return (Page) this.set("subTitle", value);
+	public Page type(Object value) {
+		return (Page) this.set("type", value);
 	}
 	
 	/**
@@ -334,31 +299,66 @@ public class Page extends BaseRenderer {
 	}
 	
 	/**
-	 * 默认不设置自动感觉内容来决定要不要展示这些区域 如果配置了，以配置为主。
+	 * 边栏是否允许拖动
     */
-	public Page regions(Object value) {
-		return (Page) this.set("regions", value);
-	}
-	
-	/**
-	 * 边栏区域
-    */
-	public Page aside(Object value) {
-		return (Page) this.set("aside", value);
+	public Page asideResizor(Object value) {
+		return (Page) this.set("asideResizor", value);
 	}
 	
 	/**
 	 * 边栏最小宽度
     */
-	public Page asideMinWidth(Object value) {
-		return (Page) this.set("asideMinWidth", value);
+	public Page asideMaxWidth(Object value) {
+		return (Page) this.set("asideMaxWidth", value);
 	}
 	
 	/**
-	 * 配置 toolbar 容器 className
+	 * 配置轮询间隔，配置后 initApi 将轮询加载。
     */
-	public Page toolbarClassName(Object value) {
-		return (Page) this.set("toolbarClassName", value);
+	public Page interval(Object value) {
+		return (Page) this.set("interval", value);
+	}
+	
+	/**
+	 * 配置停止轮询的条件。
+    */
+	public Page stopAutoRefreshWhen(Object value) {
+		return (Page) this.set("stopAutoRefreshWhen", value);
+	}
+	
+	/**
+	 * css 变量
+    */
+	public Page cssVars(Object value) {
+		return (Page) this.set("cssVars", value);
+	}
+	
+	/**
+	 * 是否显示表达式
+    */
+	public Page visibleOn(Object value) {
+		return (Page) this.set("visibleOn", value);
+	}
+	
+	/**
+	 * 移动端下的样式表
+    */
+	public Page mobileCSS(Object value) {
+		return (Page) this.set("mobileCSS", value);
+	}
+	
+	/**
+	 * 是否默认就拉取？
+    */
+	public Page initFetch(Object value) {
+		return (Page) this.set("initFetch", value);
+	}
+	
+	/**
+	 * 是否默认就拉取表达式
+    */
+	public Page initFetchOn(Object value) {
+		return (Page) this.set("initFetchOn", value);
 	}
 	
 	/**
@@ -366,5 +366,19 @@ public class Page extends BaseRenderer {
     */
 	public Page silentPolling(Object value) {
 		return (Page) this.set("silentPolling", value);
+	}
+	
+	/**
+	 * 页面副标题
+    */
+	public Page subTitle(Object value) {
+		return (Page) this.set("subTitle", value);
+	}
+	
+	/**
+	 * 静态展示表单项Value类名
+    */
+	public Page staticInputClassName(Object value) {
+		return (Page) this.set("staticInputClassName", value);
 	}
 	}

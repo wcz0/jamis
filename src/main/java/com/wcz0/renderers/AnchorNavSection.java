@@ -11,16 +11,17 @@ public class AnchorNavSection extends BaseRenderer {
 		this.set("type", "anchorNavSection");
 	}
 
-	public AnchorNavSection set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 事件动作配置
+	 * 编辑器配置，运行时可以忽略
     */
-	public AnchorNavSection onEvent(Object value) {
-		return (AnchorNavSection) this.set("onEvent", value);
+	public AnchorNavSection editorSetting(Object value) {
+		return (AnchorNavSection) this.set("editorSetting", value);
+	}
+	
+	/**
+	    */
+	public AnchorNavSection testIdBuilder(Object value) {
+		return (AnchorNavSection) this.set("testIdBuilder", value);
 	}
 	
 	/**
@@ -31,13 +32,6 @@ public class AnchorNavSection extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项类名
-    */
-	public AnchorNavSection staticClassName(Object value) {
-		return (AnchorNavSection) this.set("staticClassName", value);
-	}
-	
-	/**
 	 * 静态展示表单项Label类名
     */
 	public AnchorNavSection staticLabelClassName(Object value) {
@@ -45,45 +39,10 @@ public class AnchorNavSection extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项Value类名
+	 * 是否显示表达式
     */
-	public AnchorNavSection staticInputClassName(Object value) {
-		return (AnchorNavSection) this.set("staticInputClassName", value);
-	}
-	
-	/**
-	 * 组件样式
-    */
-	public AnchorNavSection style(Object value) {
-		return (AnchorNavSection) this.set("style", value);
-	}
-	
-	/**
-	 * 锚点链接
-    */
-	public AnchorNavSection href(Object value) {
-		return (AnchorNavSection) this.set("href", value);
-	}
-	
-	/**
-	 * 是否隐藏
-    */
-	public AnchorNavSection hidden(Object value) {
-		return (AnchorNavSection) this.set("hidden", value);
-	}
-	
-	/**
-	 * 是否隐藏表达式
-    */
-	public AnchorNavSection hiddenOn(Object value) {
-		return (AnchorNavSection) this.set("hiddenOn", value);
-	}
-	
-	/**
-	 * 组件唯一 id，主要用于日志采集
-    */
-	public AnchorNavSection id(Object value) {
-		return (AnchorNavSection) this.set("id", value);
+	public AnchorNavSection visibleOn(Object value) {
+		return (AnchorNavSection) this.set("visibleOn", value);
 	}
 	
 	/**
@@ -94,6 +53,13 @@ public class AnchorNavSection extends BaseRenderer {
 	}
 	
 	/**
+	 * 静态展示表单项类名
+    */
+	public AnchorNavSection staticClassName(Object value) {
+		return (AnchorNavSection) this.set("staticClassName", value);
+	}
+	
+	/**
 	 * 静态展示空值占位
     */
 	public AnchorNavSection staticPlaceholder(Object value) {
@@ -101,24 +67,23 @@ public class AnchorNavSection extends BaseRenderer {
 	}
 	
 	/**
-	 * 可以组件级别用来关闭移动端样式
+	 * 静态展示表单项Value类名
     */
-	public AnchorNavSection useMobileUI(Object value) {
-		return (AnchorNavSection) this.set("useMobileUI", value);
+	public AnchorNavSection staticInputClassName(Object value) {
+		return (AnchorNavSection) this.set("staticInputClassName", value);
 	}
 	
 	/**
-	 * 子节点
-    */
-	public AnchorNavSection children(Object value) {
-		return (AnchorNavSection) this.set("children", value);
+	    */
+	public AnchorNavSection testid(Object value) {
+		return (AnchorNavSection) this.set("testid", value);
 	}
 	
 	/**
-	 * 容器 css 类名
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
     */
-	public AnchorNavSection className(Object value) {
-		return (AnchorNavSection) this.set("className", value);
+	public AnchorNavSection $$id(Object value) {
+		return (AnchorNavSection) this.set("$$id", value);
 	}
 	
 	/**
@@ -129,10 +94,52 @@ public class AnchorNavSection extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否显示表达式
+	 * 内容
     */
-	public AnchorNavSection visibleOn(Object value) {
-		return (AnchorNavSection) this.set("visibleOn", value);
+	public AnchorNavSection body(Object value) {
+		return (AnchorNavSection) this.set("body", value);
+	}
+	
+	/**
+	 * 容器 css 类名
+    */
+	public AnchorNavSection className(Object value) {
+		return (AnchorNavSection) this.set("className", value);
+	}
+	
+	/**
+	 * 是否隐藏
+    */
+	public AnchorNavSection hidden(Object value) {
+		return (AnchorNavSection) this.set("hidden", value);
+	}
+	
+	/**
+	 * 锚点链接
+    */
+	public AnchorNavSection href(Object value) {
+		return (AnchorNavSection) this.set("href", value);
+	}
+	
+	/**
+	 * 子节点
+    */
+	public AnchorNavSection children(Object value) {
+		return (AnchorNavSection) this.set("children", value);
+	}
+	
+	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public AnchorNavSection useMobileUI(Object value) {
+		return (AnchorNavSection) this.set("useMobileUI", value);
+	}
+	
+	/**
+	 * 导航文字说明
+    */
+	public AnchorNavSection title(Object value) {
+		return (AnchorNavSection) this.set("title", value);
 	}
 	
 	/**
@@ -150,29 +157,36 @@ public class AnchorNavSection extends BaseRenderer {
 	}
 	
 	/**
+	 * 组件唯一 id，主要用于日志采集
+    */
+	public AnchorNavSection id(Object value) {
+		return (AnchorNavSection) this.set("id", value);
+	}
+	
+	/**
 	    */
 	public AnchorNavSection staticSchema(Object value) {
 		return (AnchorNavSection) this.set("staticSchema", value);
 	}
 	
 	/**
-	 * 编辑器配置，运行时可以忽略
+	 * 是否隐藏表达式
     */
-	public AnchorNavSection editorSetting(Object value) {
-		return (AnchorNavSection) this.set("editorSetting", value);
+	public AnchorNavSection hiddenOn(Object value) {
+		return (AnchorNavSection) this.set("hiddenOn", value);
 	}
 	
 	/**
-	 * 导航文字说明
+	 * 事件动作配置
     */
-	public AnchorNavSection title(Object value) {
-		return (AnchorNavSection) this.set("title", value);
+	public AnchorNavSection onEvent(Object value) {
+		return (AnchorNavSection) this.set("onEvent", value);
 	}
 	
 	/**
-	 * 内容
+	 * 组件样式
     */
-	public AnchorNavSection body(Object value) {
-		return (AnchorNavSection) this.set("body", value);
+	public AnchorNavSection style(Object value) {
+		return (AnchorNavSection) this.set("style", value);
 	}
 	}

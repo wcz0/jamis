@@ -11,16 +11,11 @@ public class RepeatControl extends BaseRenderer {
 		this.set("type", "repeatControl");
 	}
 
-	public RepeatControl set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 描述标题
+	 * 是否静态展示
     */
-	public RepeatControl label(Object value) {
-		return (RepeatControl) this.set("label", value);
+	public RepeatControl static_(Object value) {
+		return (RepeatControl) this.set("static_", value);
 	}
 	
 	/**
@@ -31,170 +26,10 @@ public class RepeatControl extends BaseRenderer {
 	}
 	
 	/**
-	 * 显示一个小图标, 鼠标放上去的时候显示提示内容, 这个小图标跟 label 在一起
-    */
-	public RepeatControl labelRemark(Object value) {
-		return (RepeatControl) this.set("labelRemark", value);
-	}
-	
-	/**
-	    */
-	public RepeatControl options(Object value) {
-		return (RepeatControl) this.set("options", value);
-	}
-	
-	/**
-	 * 事件动作配置
-    */
-	public RepeatControl onEvent(Object value) {
-		return (RepeatControl) this.set("onEvent", value);
-	}
-	
-	/**
-	 * 静态展示表单项Value类名
-    */
-	public RepeatControl staticInputClassName(Object value) {
-		return (RepeatControl) this.set("staticInputClassName", value);
-	}
-	
-	/**
-	 * 是否只读
-    */
-	public RepeatControl readOnly(Object value) {
-		return (RepeatControl) this.set("readOnly", value);
-	}
-	
-	/**
-	 * 描述内容，支持 Html 片段。
-    */
-	public RepeatControl description(Object value) {
-		return (RepeatControl) this.set("description", value);
-	}
-	
-	/**
-	 * 配置 input className
-    */
-	public RepeatControl inputClassName(Object value) {
-		return (RepeatControl) this.set("inputClassName", value);
-	}
-	
-	/**
-	 * 表单项隐藏时，是否在当前 Form 中删除掉该表单项值。注意同名的未隐藏的表单项值也会删掉
-    */
-	public RepeatControl clearValueOnHidden(Object value) {
-		return (RepeatControl) this.set("clearValueOnHidden", value);
-	}
-	
-	/**
-	 * 远端校验表单项接口
-    */
-	public RepeatControl validateApi(Object value) {
-		return (RepeatControl) this.set("validateApi", value);
-	}
-	
-	/**
-	 * 占位符
-    */
-	public RepeatControl placeholder(Object value) {
-		return (RepeatControl) this.set("placeholder", value);
-	}
-	
-	/**
-	 * 是否禁用
-    */
-	public RepeatControl disabled(Object value) {
-		return (RepeatControl) this.set("disabled", value);
-	}
-	
-	/**
-	 * 组件唯一 id，主要用于日志采集
-    */
-	public RepeatControl id(Object value) {
-		return (RepeatControl) this.set("id", value);
-	}
-	
-	/**
-	 * 静态展示空值占位
-    */
-	public RepeatControl staticPlaceholder(Object value) {
-		return (RepeatControl) this.set("staticPlaceholder", value);
-	}
-	
-	/**
-	    */
-	public RepeatControl staticSchema(Object value) {
-		return (RepeatControl) this.set("staticSchema", value);
-	}
-	
-	/**
-	 * 表单项大小
-    * 可选值: xs | sm | md | lg | full
-    */
-	public RepeatControl size(Object value) {
-		return (RepeatControl) this.set("size", value);
-	}
-	
-	/**
-	 * 额外的字段名，当为范围组件时可以用来将另外一个值打平出来
-    */
-	public RepeatControl extraName(Object value) {
-		return (RepeatControl) this.set("extraName", value);
-	}
-	
-	/**
-	 * 显示一个小图标, 鼠标放上去的时候显示提示内容
-    */
-	public RepeatControl remark(Object value) {
-		return (RepeatControl) this.set("remark", value);
-	}
-	
-	/**
-	 * 是否为必填
-    */
-	public RepeatControl required(Object value) {
-		return (RepeatControl) this.set("required", value);
-	}
-	
-	/**
-	 * 是否显示表达式
-    */
-	public RepeatControl visibleOn(Object value) {
-		return (RepeatControl) this.set("visibleOn", value);
-	}
-	
-	/**
-	 * 是否静态展示
-    */
-	public RepeatControl static_(Object value) {
-		return (RepeatControl) this.set("static_", value);
-	}
-	
-	/**
-	 * label自定义宽度，默认单位为px
-    */
-	public RepeatControl labelWidth(Object value) {
-		return (RepeatControl) this.set("labelWidth", value);
-	}
-	
-	/**
 	 * 配置 label className
     */
 	public RepeatControl labelClassName(Object value) {
 		return (RepeatControl) this.set("labelClassName", value);
-	}
-	
-	/**
-	 * 输入提示，聚焦的时候显示
-    */
-	public RepeatControl hint(Object value) {
-		return (RepeatControl) this.set("hint", value);
-	}
-	
-	/**
-	 * 当配置为水平布局的时候，用来配置具体的左右分配。
-    */
-	public RepeatControl horizontal(Object value) {
-		return (RepeatControl) this.set("horizontal", value);
 	}
 	
 	/**
@@ -204,17 +39,10 @@ public class RepeatControl extends BaseRenderer {
 	}
 	
 	/**
-	 * 容器 css 类名
+	 * 配置描述上的 className
     */
-	public RepeatControl className(Object value) {
-		return (RepeatControl) this.set("className", value);
-	}
-	
-	/**
-	 * 是否禁用表达式
-    */
-	public RepeatControl disabledOn(Object value) {
-		return (RepeatControl) this.set("disabledOn", value);
+	public RepeatControl descriptionClassName(Object value) {
+		return (RepeatControl) this.set("descriptionClassName", value);
 	}
 	
 	/**
@@ -225,10 +53,17 @@ public class RepeatControl extends BaseRenderer {
 	}
 	
 	/**
-	 * 是否隐藏表达式
+	 * 显示一个小图标, 鼠标放上去的时候显示提示内容, 这个小图标跟 label 在一起
     */
-	public RepeatControl hiddenOn(Object value) {
-		return (RepeatControl) this.set("hiddenOn", value);
+	public RepeatControl labelRemark(Object value) {
+		return (RepeatControl) this.set("labelRemark", value);
+	}
+	
+	/**
+	 * 自动填充，当选项被选择的时候，将选项中的其他值同步设置到表单内。
+    */
+	public RepeatControl autoFill(Object value) {
+		return (RepeatControl) this.set("autoFill", value);
 	}
 	
 	/**
@@ -253,24 +88,38 @@ public class RepeatControl extends BaseRenderer {
 	}
 	
 	/**
-	 * 默认值，切记只能是静态值，不支持取变量，跟数据关联是通过设置 name 属性来实现的。
+	 * 是否为必填
     */
-	public RepeatControl value(Object value) {
-		return (RepeatControl) this.set("value", value);
+	public RepeatControl required(Object value) {
+		return (RepeatControl) this.set("required", value);
 	}
 	
 	/**
-	 * 表单项类型
+	 * 远端校验表单项接口
     */
-	public RepeatControl type(Object value) {
-		return (RepeatControl) this.set("type", value);
+	public RepeatControl validateApi(Object value) {
+		return (RepeatControl) this.set("validateApi", value);
 	}
 	
 	/**
-	 * 在Table中调整宽度
+	 * 静态展示表单项Label类名
     */
-	public RepeatControl width(Object value) {
-		return (RepeatControl) this.set("width", value);
+	public RepeatControl staticLabelClassName(Object value) {
+		return (RepeatControl) this.set("staticLabelClassName", value);
+	}
+	
+	/**
+	 * 是否只读
+    */
+	public RepeatControl readOnly(Object value) {
+		return (RepeatControl) this.set("readOnly", value);
+	}
+	
+	/**
+	 * 事件动作配置
+    */
+	public RepeatControl onEvent(Object value) {
+		return (RepeatControl) this.set("onEvent", value);
 	}
 	
 	/**
@@ -281,17 +130,127 @@ public class RepeatControl extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项类名
+	 * 当配置为水平布局的时候，用来配置具体的左右分配。
     */
-	public RepeatControl staticClassName(Object value) {
-		return (RepeatControl) this.set("staticClassName", value);
+	public RepeatControl horizontal(Object value) {
+		return (RepeatControl) this.set("horizontal", value);
 	}
 	
 	/**
-	 * 组件样式
+	 * 表单项类型
     */
-	public RepeatControl style(Object value) {
-		return (RepeatControl) this.set("style", value);
+	public RepeatControl type(Object value) {
+		return (RepeatControl) this.set("type", value);
+	}
+	
+	/**
+	 * 是否禁用
+    */
+	public RepeatControl disabled(Object value) {
+		return (RepeatControl) this.set("disabled", value);
+	}
+	
+	/**
+	 * 是否显示表达式
+    */
+	public RepeatControl visibleOn(Object value) {
+		return (RepeatControl) this.set("visibleOn", value);
+	}
+	
+	/**
+	 * 额外的字段名，当为范围组件时可以用来将另外一个值打平出来
+    */
+	public RepeatControl extraName(Object value) {
+		return (RepeatControl) this.set("extraName", value);
+	}
+	
+	/**
+	 * 占位符
+    */
+	public RepeatControl placeholder(Object value) {
+		return (RepeatControl) this.set("placeholder", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
+    */
+	public RepeatControl $$id(Object value) {
+		return (RepeatControl) this.set("$$id", value);
+	}
+	
+	/**
+	 * 配置当前表单项展示模式
+    * 可选值: normal | inline | horizontal
+    */
+	public RepeatControl mode(Object value) {
+		return (RepeatControl) this.set("mode", value);
+	}
+	
+	/**
+	 * 验证失败的提示信息
+    */
+	public RepeatControl validationErrors(Object value) {
+		return (RepeatControl) this.set("validationErrors", value);
+	}
+	
+	/**
+	 * 默认值，切记只能是静态值，不支持取变量，跟数据关联是通过设置 name 属性来实现的。
+    */
+	public RepeatControl value(Object value) {
+		return (RepeatControl) this.set("value", value);
+	}
+	
+	/**
+	    */
+	public RepeatControl initAutoFill(Object value) {
+		return (RepeatControl) this.set("initAutoFill", value);
+	}
+	
+	/**
+	 * 是否隐藏表达式
+    */
+	public RepeatControl hiddenOn(Object value) {
+		return (RepeatControl) this.set("hiddenOn", value);
+	}
+	
+	/**
+	    */
+	public RepeatControl staticSchema(Object value) {
+		return (RepeatControl) this.set("staticSchema", value);
+	}
+	
+	/**
+	 * 描述内容，支持 Html 片段。
+    */
+	public RepeatControl description(Object value) {
+		return (RepeatControl) this.set("description", value);
+	}
+	
+	/**
+	 * 表单 control 是否为 inline 模式。
+    */
+	public RepeatControl inline(Object value) {
+		return (RepeatControl) this.set("inline", value);
+	}
+	
+	/**
+	 * 配置 input className
+    */
+	public RepeatControl inputClassName(Object value) {
+		return (RepeatControl) this.set("inputClassName", value);
+	}
+	
+	/**
+	    */
+	public RepeatControl options(Object value) {
+		return (RepeatControl) this.set("options", value);
+	}
+	
+	/**
+	 * 是否禁用表达式
+    */
+	public RepeatControl disabledOn(Object value) {
+		return (RepeatControl) this.set("disabledOn", value);
 	}
 	
 	/**
@@ -309,10 +268,94 @@ public class RepeatControl extends BaseRenderer {
 	}
 	
 	/**
+	 * 静态展示表单项Value类名
+    */
+	public RepeatControl staticInputClassName(Object value) {
+		return (RepeatControl) this.set("staticInputClassName", value);
+	}
+	
+	/**
+	 * 描述标题
+    */
+	public RepeatControl label(Object value) {
+		return (RepeatControl) this.set("label", value);
+	}
+	
+	/**
+	 * 显示一个小图标, 鼠标放上去的时候显示提示内容
+    */
+	public RepeatControl remark(Object value) {
+		return (RepeatControl) this.set("remark", value);
+	}
+	
+	/**
+	 * 输入提示，聚焦的时候显示
+    */
+	public RepeatControl hint(Object value) {
+		return (RepeatControl) this.set("hint", value);
+	}
+	
+	/**
+	 * 表单项大小
+    * 可选值: xs | sm | md | lg | full
+    */
+	public RepeatControl size(Object value) {
+		return (RepeatControl) this.set("size", value);
+	}
+	
+	/**
+	 * 在Table中调整宽度
+    */
+	public RepeatControl width(Object value) {
+		return (RepeatControl) this.set("width", value);
+	}
+	
+	/**
+	 * 容器 css 类名
+    */
+	public RepeatControl className(Object value) {
+		return (RepeatControl) this.set("className", value);
+	}
+	
+	/**
+	 * 静态展示空值占位
+    */
+	public RepeatControl staticPlaceholder(Object value) {
+		return (RepeatControl) this.set("staticPlaceholder", value);
+	}
+	
+	/**
+	 * 静态展示表单项类名
+    */
+	public RepeatControl staticClassName(Object value) {
+		return (RepeatControl) this.set("staticClassName", value);
+	}
+	
+	/**
+	 * 组件唯一 id，主要用于日志采集
+    */
+	public RepeatControl id(Object value) {
+		return (RepeatControl) this.set("id", value);
+	}
+	
+	/**
+	 * 组件样式
+    */
+	public RepeatControl style(Object value) {
+		return (RepeatControl) this.set("style", value);
+	}
+	
+	/**
 	 * 可以组件级别用来关闭移动端样式
     */
 	public RepeatControl useMobileUI(Object value) {
 		return (RepeatControl) this.set("useMobileUI", value);
+	}
+	
+	/**
+	    */
+	public RepeatControl testIdBuilder(Object value) {
+		return (RepeatControl) this.set("testIdBuilder", value);
 	}
 	
 	/**
@@ -323,44 +366,22 @@ public class RepeatControl extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项Label类名
+	 * 表单项隐藏时，是否在当前 Form 中删除掉该表单项值。注意同名的未隐藏的表单项值也会删掉
     */
-	public RepeatControl staticLabelClassName(Object value) {
-		return (RepeatControl) this.set("staticLabelClassName", value);
-	}
-	
-	/**
-	 * 配置描述上的 className
-    */
-	public RepeatControl descriptionClassName(Object value) {
-		return (RepeatControl) this.set("descriptionClassName", value);
-	}
-	
-	/**
-	 * 配置当前表单项展示模式
-    * 可选值: normal | inline | horizontal
-    */
-	public RepeatControl mode(Object value) {
-		return (RepeatControl) this.set("mode", value);
-	}
-	
-	/**
-	 * 表单 control 是否为 inline 模式。
-    */
-	public RepeatControl inline(Object value) {
-		return (RepeatControl) this.set("inline", value);
-	}
-	
-	/**
-	 * 验证失败的提示信息
-    */
-	public RepeatControl validationErrors(Object value) {
-		return (RepeatControl) this.set("validationErrors", value);
+	public RepeatControl clearValueOnHidden(Object value) {
+		return (RepeatControl) this.set("clearValueOnHidden", value);
 	}
 	
 	/**
 	    */
 	public RepeatControl validations(Object value) {
 		return (RepeatControl) this.set("validations", value);
+	}
+	
+	/**
+	 * label自定义宽度，默认单位为px
+    */
+	public RepeatControl labelWidth(Object value) {
+		return (RepeatControl) this.set("labelWidth", value);
 	}
 	}

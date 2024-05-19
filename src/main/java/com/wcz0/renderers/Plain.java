@@ -11,30 +11,11 @@ public class Plain extends BaseRenderer {
 		this.set("type", "plain");
 	}
 
-	public Plain set(String key, Object value) {
-		super.set(key, value);
-		return this;
-	}
-
 	/**
-	 * 是否内联显示？
+	 * 是否禁用
     */
-	public Plain inline(Object value) {
-		return (Plain) this.set("inline", value);
-	}
-	
-	/**
-	 * 是否禁用表达式
-    */
-	public Plain disabledOn(Object value) {
-		return (Plain) this.set("disabledOn", value);
-	}
-	
-	/**
-	 * 是否隐藏
-    */
-	public Plain hidden(Object value) {
-		return (Plain) this.set("hidden", value);
+	public Plain disabled(Object value) {
+		return (Plain) this.set("disabled", value);
 	}
 	
 	/**
@@ -45,23 +26,37 @@ public class Plain extends BaseRenderer {
 	}
 	
 	/**
+	 * 是否静态展示
+    */
+	public Plain static_(Object value) {
+		return (Plain) this.set("static_", value);
+	}
+	
+	/**
 	    */
-	public Plain staticSchema(Object value) {
-		return (Plain) this.set("staticSchema", value);
+	public Plain testid(Object value) {
+		return (Plain) this.set("testid", value);
 	}
 	
 	/**
-	 * 编辑器配置，运行时可以忽略
+	 * 是否内联显示？
     */
-	public Plain editorSetting(Object value) {
-		return (Plain) this.set("editorSetting", value);
+	public Plain inline(Object value) {
+		return (Plain) this.set("inline", value);
 	}
 	
 	/**
-	 * 是否静态展示表达式
+	 * 是否隐藏表达式
     */
-	public Plain staticOn(Object value) {
-		return (Plain) this.set("staticOn", value);
+	public Plain hiddenOn(Object value) {
+		return (Plain) this.set("hiddenOn", value);
+	}
+	
+	/**
+	 * 静态展示空值占位
+    */
+	public Plain staticPlaceholder(Object value) {
+		return (Plain) this.set("staticPlaceholder", value);
 	}
 	
 	/**
@@ -72,18 +67,31 @@ public class Plain extends BaseRenderer {
 	}
 	
 	/**
-	 * 指定为模板渲染器。文档：https://aisuda.bce.baidu.com/amis/zh-CN/docs/concepts/template
-    * 可选值: plain | text
+	 * 静态展示表单项Value类名
     */
-	public Plain type(Object value) {
-		return (Plain) this.set("type", value);
+	public Plain staticInputClassName(Object value) {
+		return (Plain) this.set("staticInputClassName", value);
 	}
 	
 	/**
-	 * 是否静态展示
+	 * 组件样式
     */
-	public Plain static_(Object value) {
-		return (Plain) this.set("static_", value);
+	public Plain style(Object value) {
+		return (Plain) this.set("style", value);
+	}
+	
+	/**
+	 * 可以组件级别用来关闭移动端样式
+    */
+	public Plain useMobileUI(Object value) {
+		return (Plain) this.set("useMobileUI", value);
+	}
+	
+	/**
+	 * 事件动作配置
+    */
+	public Plain onEvent(Object value) {
+		return (Plain) this.set("onEvent", value);
 	}
 	
 	/**
@@ -94,24 +102,10 @@ public class Plain extends BaseRenderer {
 	}
 	
 	/**
-	 * 静态展示表单项Value类名
+	 * 组件唯一 id，主要用于页面设计器中定位 json 节点
     */
-	public Plain staticInputClassName(Object value) {
-		return (Plain) this.set("staticInputClassName", value);
-	}
-	
-	/**
-	 * 是否禁用
-    */
-	public Plain disabled(Object value) {
-		return (Plain) this.set("disabled", value);
-	}
-	
-	/**
-	 * 是否隐藏表达式
-    */
-	public Plain hiddenOn(Object value) {
-		return (Plain) this.set("hiddenOn", value);
+	public Plain $$id(Object value) {
+		return (Plain) this.set("$$id", value);
 	}
 	
 	/**
@@ -129,22 +123,31 @@ public class Plain extends BaseRenderer {
 	}
 	
 	/**
-	 * 组件样式
+	 * 是否静态展示表达式
     */
-	public Plain style(Object value) {
-		return (Plain) this.set("style", value);
-	}
-	
-	/**
-	    */
-	public Plain tpl(Object value) {
-		return (Plain) this.set("tpl", value);
+	public Plain staticOn(Object value) {
+		return (Plain) this.set("staticOn", value);
 	}
 	
 	/**
 	    */
 	public Plain text(Object value) {
 		return (Plain) this.set("text", value);
+	}
+	
+	/**
+	 * 是否禁用表达式
+    */
+	public Plain disabledOn(Object value) {
+		return (Plain) this.set("disabledOn", value);
+	}
+	
+	/**
+	 * 指定为模板渲染器。文档：https://aisuda.bce.baidu.com/amis/zh-CN/docs/concepts/template
+    * 可选值: plain | text
+    */
+	public Plain type(Object value) {
+		return (Plain) this.set("type", value);
 	}
 	
 	/**
@@ -155,6 +158,25 @@ public class Plain extends BaseRenderer {
 	}
 	
 	/**
+	 * 是否隐藏
+    */
+	public Plain hidden(Object value) {
+		return (Plain) this.set("hidden", value);
+	}
+	
+	/**
+	    */
+	public Plain staticSchema(Object value) {
+		return (Plain) this.set("staticSchema", value);
+	}
+	
+	/**
+	    */
+	public Plain tpl(Object value) {
+		return (Plain) this.set("tpl", value);
+	}
+	
+	/**
 	 * 容器 css 类名
     */
 	public Plain className(Object value) {
@@ -162,23 +184,15 @@ public class Plain extends BaseRenderer {
 	}
 	
 	/**
-	 * 事件动作配置
+	 * 编辑器配置，运行时可以忽略
     */
-	public Plain onEvent(Object value) {
-		return (Plain) this.set("onEvent", value);
+	public Plain editorSetting(Object value) {
+		return (Plain) this.set("editorSetting", value);
 	}
 	
 	/**
-	 * 静态展示空值占位
-    */
-	public Plain staticPlaceholder(Object value) {
-		return (Plain) this.set("staticPlaceholder", value);
-	}
-	
-	/**
-	 * 可以组件级别用来关闭移动端样式
-    */
-	public Plain useMobileUI(Object value) {
-		return (Plain) this.set("useMobileUI", value);
+	    */
+	public Plain testIdBuilder(Object value) {
+		return (Plain) this.set("testIdBuilder", value);
 	}
 	}
